@@ -1,3 +1,7 @@
+<?php
+include 'essentials.php';
+?>
+
 <!doctype html>
 <html lang="en">
 

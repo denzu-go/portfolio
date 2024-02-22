@@ -30,19 +30,19 @@
                     <span class="hide-menu">UI COMPONENTS</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-buttons.php" aria-expanded="false">
+                    <a class="sidebar-link" href="./video_edit.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
                         </span>
-                        <span class="hide-menu">Buttons</span>
+                        <span class="hide-menu">Video Edit</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-alerts.php" aria-expanded="false">
+                    <a class="sidebar-link" href="graphic_design.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-alert-circle"></i>
                         </span>
-                        <span class="hide-menu">Alerts</span>
+                        <span class="hide-menu">Graphic Design</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -50,7 +50,7 @@
                         <span>
                             <i class="ti ti-cards"></i>
                         </span>
-                        <span class="hide-menu">Card</span>
+                        <span class="hide-menu">Social Media</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -58,7 +58,7 @@
                         <span>
                             <i class="ti ti-file-description"></i>
                         </span>
-                        <span class="hide-menu">Forms</span>
+                        <span class="hide-menu">Brand and Logo</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -66,7 +66,7 @@
                         <span>
                             <i class="ti ti-typography"></i>
                         </span>
-                        <span class="hide-menu">Typography</span>
+                        <span class="hide-menu">Web Design & UI/UX</span>
                     </a>
                 </li>
                 <li class="nav-small-cap">

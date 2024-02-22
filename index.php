@@ -413,18 +413,18 @@ include 'essentials.php';
             <button class="btn btn-primary" data-filter=".brand">Brand</button>
           </div>
         </div>
-
+  
         <div id="posts" class="row no-gutter">
           <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_1.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+            <a href="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/429581654_899166542212216_5205261551524424156_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHjSlSFInYcwWCZaCEXrIiomeUV8v3PTJyZ5RXy_c9MnGNJln43wAcYoEduS8dtvtx3iu37cgYpnK7eLwgnlPHK&_nc_ohc=Yw9Wx-798mwAX_cPwN6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfC8ba98N8jmfmKyqkF203mszVMRa1AvEVLQ6v7tJqbtCw&oe=65DC2154" class="item-wrap fancybox" data-fancybox="gallery2">
               <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_1.jpg">
+              <img class="img-fluid" src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/429581654_899166542212216_5205261551524424156_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHjSlSFInYcwWCZaCEXrIiomeUV8v3PTJyZ5RXy_c9MnGNJln43wAcYoEduS8dtvtx3iu37cgYpnK7eLwgnlPHK&_nc_ohc=Yw9Wx-798mwAX_cPwN6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfC8ba98N8jmfmKyqkF203mszVMRa1AvEVLQ6v7tJqbtCw&oe=65DC2154">
             </a>
           </div>
           <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_2.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+            <a href="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/428358289_740480744851116_3833564012570685487_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGw27jLwMC_vaJPBYt0JlCi0QHaYiW5VODRAdpiJblU4FX9sTOq2BP-eaevaZcOWu54ThZL7ouCSjfW4VYsZVs8&_nc_ohc=MxT7a6o39wIAX9gKwth&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfBSDMwNiyS1ReCsTFS5Cvn4rbck1heVJqAvBzP3O7X-uQ&oe=65DCF7B5" class="item-wrap fancybox" data-fancybox="gallery2">
               <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_2.jpg">
+              <img class="img-fluid" src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/428358289_740480744851116_3833564012570685487_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGw27jLwMC_vaJPBYt0JlCi0QHaYiW5VODRAdpiJblU4FX9sTOq2BP-eaevaZcOWu54ThZL7ouCSjfW4VYsZVs8&_nc_ohc=MxT7a6o39wIAX9gKwth&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfBSDMwNiyS1ReCsTFS5Cvn4rbck1heVJqAvBzP3O7X-uQ&oe=65DCF7B5">
             </a>
           </div>
 

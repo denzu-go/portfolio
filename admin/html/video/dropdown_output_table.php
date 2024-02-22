@@ -1,11 +1,14 @@
 <?php
 include "../../../database/connection.php";
 
+// Get the value of the hidden input
+$selectedClient = isset($_REQUEST['selectedClient']) ? $_REQUEST['selectedClient'] : null;
+
 // Initialize an empty array to hold JSON data
 $json = array();
 
 // Initialize the HTML content
-$content = '<select class="form-select" id="editClientSelect">';
+$content = '<select class="form-select" id="clientSelect">';
 
 // Fetch client data from the database
 $sql = "SELECT client_id, client_name FROM video_clients";
@@ -13,17 +16,20 @@ $result = $conn->query($sql);
 
 // Check if there are any clients
 if ($result->num_rows > 0) {
-    // Add the default option "N/A"
-    $content .= '<option value="">N/A</option>';
+    // Initialize the default option
+    $naSelected = ($selectedClient == 0) ? 'selected' : ''; // Check if $selectedClient is 0
+    $content .= '<option value="" ' . $naSelected . '>N/A</option>';
 
     // Append options for each client
     while ($row = $result->fetch_assoc()) {
-        $content .= '<option value="' . $row['client_id'] . '">' . $row['client_name'] . '</option>';
+        $selected = ($row['client_id'] == $selectedClient) ? 'selected' : ''; // Check if client_id matches the outputId
+        $content .= '<option value="' . $row['client_id'] . '" ' . $selected . '>' . $row['client_name'] . '</option>';
     }
 } else {
     // If no clients available, display a default option
     $content .= '<option value="">No clients available</option>';
 }
+
 
 // Close the select element
 $content .= '</select>';

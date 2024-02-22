@@ -2,7 +2,7 @@
 include "../../../database/connection.php";
 $json = array();
 
-$sql = "SELECT * FROM video_clients";
+$sql = "SELECT * FROM video_clients ORDER BY date_added DESC"; // Ordering by date_added in descending order
 $result = $conn->query($sql);
 
 $number = 1;
@@ -26,15 +26,11 @@ while ($fetched = $result->fetch_assoc()) {
 
 
     $show_client_id = '
-        <td class="border-bottom-0">
-            <h6 class="fw-semibold mb-0 small">' . $client_id . '</h6>
-        </td>
+            <span class="small fw-semibold mb-0 ">' . $client_id . '</span>
     ';
 
     $show_client_name = '
-        <td class="border-bottom-0">
-            <span class="small fw-semibold mb-1 d-inline-block text-truncate" style="max-width: 140px;" data-toggle="tooltip" data-placement="top" title="'.$client_name.'">' . $client_name . '</span>
-        </td>
+    <span class="small ellipsis" data-toggle="tooltip" title="'.$client_name.'">' . $client_name . '</span>
     ';
 
     $show_status = '
@@ -44,7 +40,7 @@ while ($fetched = $result->fetch_assoc()) {
     ';
 
     $show_actions = '
-        <i id="edit_client" class="fas fa-pen btn text-secondary p-2 m-0" data-client_id="' . $client_id . '" data-client_name="' . $client_name . '" data-is_visible="' . $is_visible . '"></i>
+        <i id="edit_client" class="fas fa-pen btn text-secondary p-2 m-0" data-client_id="' . $client_id . '" data-client_name="' . $client_name . '" data-is_visible="' . $is_visible . '" data-date_added="' . $date_added . '"></i>
         <i id="delete_client" data-client_id="' . $client_id . '" class="fas fa-trash btn text-danger p-2 m-0"></i>
     ';
 
@@ -54,7 +50,7 @@ while ($fetched = $result->fetch_assoc()) {
             <h6 class="fw-semibold mb-0 small">' . $number++ . '</h6>
         </td>
     ';
-    
+
 
     $json[] = array(
         "number" => $show_number,

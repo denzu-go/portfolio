@@ -379,9 +379,24 @@ include 'global/head.php';
         var clientName = $("#newClientName").val();
         var clientVisibility = $("#newClientVisibility").prop('checked') ? 1 : 0;
 
+        // Validate Client Name
+        if (clientName === '') {
+          iziToast.error({
+            color: 'red',
+            progressBarColor: '#0c344e',
+            title: 'Error',
+            message: 'Client Name is required.',
+            titleColor: '#0c344e',
+            messageColor: '#0c344e',
+            timeout: 4000,
+            overlayColor: 'rgba(0, 0, 0, 0.7)',
+          });
+          return;
+        }
+
         // Send form data to process_add_client.php using AJAX
         $.ajax({
-          url: 'graphic/process_add_client.php',
+          url: 'social_media/process_add_client.php',
           type: 'POST',
           data: {
             clientName: clientName,
@@ -413,7 +428,7 @@ include 'global/head.php';
         responsive: true, // Enable responsiveness
         scrollX: true,
         ajax: {
-          url: "graphic/json_clients_table.php",
+          url: "social_media/json_clients_table.php",
           data: {},
           dataSrc: ""
         },
@@ -485,7 +500,7 @@ include 'global/head.php';
         }).then((confirmed) => {
           if (confirmed) {
             $.ajax({
-              url: 'graphic/process_delete_client.php',
+              url: 'social_media/process_delete_client.php',
               type: 'POST',
               data: {
                 client_id: client_id
@@ -541,7 +556,7 @@ include 'global/head.php';
 
         $.ajax({
           type: 'POST',
-          url: 'graphic/process_edit_client.php',
+          url: 'social_media/process_edit_client.php',
           data: formData,
           success: function(response) {
             $('#clientsTable').DataTable().ajax.reload();
@@ -586,7 +601,7 @@ include 'global/head.php';
         responsive: true,
         scrollX: true,
         ajax: {
-          url: "graphic/json_outputs_table.php",
+          url: "social_media/json_outputs_table.php",
           data: {},
           dataSrc: ""
         },
@@ -630,7 +645,7 @@ include 'global/head.php';
         responsive: false,
         scrollX: false,
         ajax: {
-          url: "graphic/dropdown_client_table.php",
+          url: "social_media/dropdown_client_table.php",
           data: {},
           dataSrc: ""
         },
@@ -642,8 +657,8 @@ include 'global/head.php';
       $("#addOutput").click(function() {
         // Collect form data
         var linkInput = $("#linkInput").val();
-        var newOutputVisibility = $("#newOutputVisibility").prop('checked') ? 1 : 0;
-        var clientSelect = $("#clientSelect").val();
+        var newOutputVisibility = $("#newOutputVisibility").prop('checked') ? 1 : 0; // Convert boolean to integer
+        var editClientSelect = $("#editClientSelect").val();
 
         // Validate Client Name
         if (linkInput === '') {
@@ -660,22 +675,25 @@ include 'global/head.php';
           return;
         }
 
-        alert('linkInput: ' + linkInput + ' | ' + 'newOutputVisibility: ' + newOutputVisibility + ' | ' + 'clientSelect: ' + clientSelect);
-
-        
+        // Send form data to process_add_client.php using AJAX
         $.ajax({
-          url: 'graphic/process_add_output.php',
+          url: 'social_media/process_add_output.php',
           type: 'POST',
           data: {
             linkInput: linkInput,
             newOutputVisibility: newOutputVisibility,
-            clientSelect: clientSelect
+            editClientSelect: editClientSelect
           },
           success: function(response) {
             $('#clientsTable').DataTable().ajax.reload();
             $('#outputsTable').DataTable().ajax.reload();
             $('#dropdown_client_table').DataTable().ajax.reload();
+
+            $("#linkInput").val('');
+            $("#newOutputVisibility").prop('checked', true);
+            $("#clientSelect").val('');
             $('#addOutputModal').modal('hide');
+
             iziToast.success({
               color: 'green',
               progressBarColor: '#0c344e',
@@ -743,7 +761,7 @@ include 'global/head.php';
           responsive: false,
           scrollX: false,
           ajax: {
-            url: "graphic/dropdown_output_table.php",
+            url: "social_media/dropdown_output_table.php",
             data: {
               selectedClient: selectedClient // Pass selectedClient to the server
             },
@@ -792,7 +810,7 @@ include 'global/head.php';
 
         $.ajax({
           type: 'POST',
-          url: 'graphic/process_edit_output.php',
+          url: 'social_media/process_edit_output.php',
           data: formData,
           success: function(response) {
             $('#clientsTable').DataTable().ajax.reload();
@@ -821,6 +839,46 @@ include 'global/head.php';
       });
 
 
+
+
+      $('#outputsTable').on('click', '#delete_output', function() {
+        var output_id = $(this).data('output_id');
+
+        swal({
+          title: 'Confirm',
+          text: 'Are you sure you want to delete this?',
+          icon: 'warning',
+          buttons: {
+            cancel: 'NO',
+            confirm: {
+              text: 'YES',
+              value: true,
+              className: 'swal-confirm-button'
+            }
+          },
+          dangerMode: true
+        }).then((confirmed) => {
+          if (confirmed) {
+            $.ajax({
+              url: 'social_media/process_delete_output.php',
+              type: 'POST',
+              data: {
+                output_id: output_id
+              },
+              success: function(response) {
+                $('#clientsTable').DataTable().ajax.reload();
+                $('#outputsTable').DataTable().ajax.reload();
+                $('#dropdown_client_table').DataTable().ajax.reload();
+              },
+              error: function(xhr, status, error) {
+                swal('Error', 'An error occurred while deleting.', 'error');
+              }
+            });
+          } else {
+            // If NO, do nothing
+          }
+        });
+      });
 
 
 

@@ -22,12 +22,12 @@
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>
-                        <span class="hide-menu">Clients & Projects</span>
+                        <span class="hide-menu">Home</span>
                     </a>
                 </li>
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">UI COMPONENTS</span>
+                    <span class="hide-menu">Portfolio</span>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="./video_edit.php" aria-expanded="false">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-card.php" aria-expanded="false">
+                    <a class="sidebar-link" href="./social_media.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-cards"></i>
                         </span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-forms.php" aria-expanded="false">
+                    <a class="sidebar-link" href="./brand_logo.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-file-description"></i>
                         </span>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./ui-typography.php" aria-expanded="false">
+                    <a class="sidebar-link" href="./web.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-typography"></i>
                         </span>

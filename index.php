@@ -30,6 +30,9 @@ include 'essentials.php';
 
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -55,53 +58,9 @@ include 'essentials.php';
     </div>
 
 
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center">
-
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.php" class="h2 mb-0">Denzu<span class="text-primary">.</span> </a></h1>
-          </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li class="has-children">
-                  <a href="#about-section" class="nav-link">About Us</a>
-                  <ul class="dropdown">
-                    <li><a href="#team-section" class="nav-link">Team</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-
-    </header>
+    <?php
+    include 'global/header.php';
+    ?>
 
 
 
@@ -128,7 +87,6 @@ include 'essentials.php';
         </span>
       </a>
     </div>
-
 
     <div class="site-section cta-big-image" id="about-section">
       <div class="container">
@@ -169,308 +127,38 @@ include 'essentials.php';
       </div>
     </div>
 
-    <section class="site-section">
-      <div class="container">
-
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Our Features</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-
-            <div class="owl-carousel slide-one-item-alt">
-              <img src="images/slide_1.jpg" alt="Image" class="img-fluid">
-              <img src="images/slide_2.jpg" alt="Image" class="img-fluid">
-              <img src="images/slide_3.jpg" alt="Image" class="img-fluid">
-              <img src="images/slide_4.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="custom-direction">
-              <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
-            </div>
-
-          </div>
-          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="owl-carousel slide-one-item-alt-text">
-              <div>
-                <h2 class="section-title mb-3">Minimal and Modern Design</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
-
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
-              </div>
-              <div>
-                <h2 class="section-title mb-3">Do things with love</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
-
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
-              </div>
-              <div>
-                <h2 class="section-title mb-3">Take your business online</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
-
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
-              </div>
-              <div>
-                <h2 class="section-title mb-3">4 Our Dedicated Professionals</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
-
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="site-section border-bottom" id="team-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Our Team</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p>
-          </div>
-        </div>
-        <div class="row">
-
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_5.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Kaiara Spencer</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_6.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Dave Simpson</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_7.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Ben Thompson</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_8.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Kyla Stewart</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Kaiara Spencer</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Dave Simpson</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Ben Thompson</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <figure>
-                <ul class="social">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="p-3">
-                <h3>Chris Stewart</h3>
-                <span class="position">Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </section>
-
     <section class="site-section" id="portfolio-section">
+      <div class="col-12 text-center" data-aos="fade">
+        <h2 class="section-title mb-3">My Portfolio</h2>
+      </div>
+      <div class="row justify-content-center mb-0" data-aos="fade-up">
+        <a href="#portfolio1-section" class="btn btn-outline-primary nav-link mr-2">Video Edits</a>
+        <a href="#portfolio2-section" class="btn btn-outline-primary nav-link mr-2">Graphic Designs</a>
+        <a href="#portfolio3-section" class="btn btn-outline-primary nav-link mr-2">Social Media</a>
+        <a href="#portfolio4-section" class="btn btn-outline-primary nav-link">Web & UI/UX</a>
+      </div>
+    </section>
 
 
+    <section class="site-section" id="portfolio1-section">
       <div class="container">
 
         <div class="row mb-3">
           <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">Portfolio</h2>
+            <h2 class="mb-3">Video Edits</h2>
           </div>
         </div>
 
         <div class="row justify-content-center mb-5" data-aos="fade-up">
-          <div id="filters" class="filters text-center button-group col-md-7">
+          <div id="filters1" class="filters text-center button-group col-md-7">
             <button class="btn btn-primary active" data-filter="*">All</button>
             <button class="btn btn-primary" data-filter=".web">Web</button>
             <button class="btn btn-primary" data-filter=".design">Design</button>
             <button class="btn btn-primary" data-filter=".brand">Brand</button>
           </div>
         </div>
-  
-        <div id="posts" class="row no-gutter">
-          <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/429581654_899166542212216_5205261551524424156_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHjSlSFInYcwWCZaCEXrIiomeUV8v3PTJyZ5RXy_c9MnGNJln43wAcYoEduS8dtvtx3iu37cgYpnK7eLwgnlPHK&_nc_ohc=Yw9Wx-798mwAX_cPwN6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfC8ba98N8jmfmKyqkF203mszVMRa1AvEVLQ6v7tJqbtCw&oe=65DC2154" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/429581654_899166542212216_5205261551524424156_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHjSlSFInYcwWCZaCEXrIiomeUV8v3PTJyZ5RXy_c9MnGNJln43wAcYoEduS8dtvtx3iu37cgYpnK7eLwgnlPHK&_nc_ohc=Yw9Wx-798mwAX_cPwN6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfC8ba98N8jmfmKyqkF203mszVMRa1AvEVLQ6v7tJqbtCw&oe=65DC2154">
-            </a>
-          </div>
-          <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/428358289_740480744851116_3833564012570685487_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGw27jLwMC_vaJPBYt0JlCi0QHaYiW5VODRAdpiJblU4FX9sTOq2BP-eaevaZcOWu54ThZL7ouCSjfW4VYsZVs8&_nc_ohc=MxT7a6o39wIAX9gKwth&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfBSDMwNiyS1ReCsTFS5Cvn4rbck1heVJqAvBzP3O7X-uQ&oe=65DCF7B5" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/428358289_740480744851116_3833564012570685487_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGw27jLwMC_vaJPBYt0JlCi0QHaYiW5VODRAdpiJblU4FX9sTOq2BP-eaevaZcOWu54ThZL7ouCSjfW4VYsZVs8&_nc_ohc=MxT7a6o39wIAX9gKwth&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfBSDMwNiyS1ReCsTFS5Cvn4rbck1heVJqAvBzP3O7X-uQ&oe=65DCF7B5">
-            </a>
-          </div>
 
-          <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_3.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_3.jpg">
-            </a>
-          </div>
-
-          <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-
-            <a href="images/img_4.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_4.jpg">
-            </a>
-
-          </div>
-
-          <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_5.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_5.jpg">
-            </a>
-          </div>
-
-          <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_6.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_6.jpg">
-            </a>
-          </div>
-
-          <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_7.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_7.jpg">
-            </a>
-          </div>
-
-          <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_8.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_8.jpg">
-            </a>
-          </div>
+        <div id="posts1" class="row no-gutter">
 
           <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
             <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
@@ -493,17 +181,49 @@ include 'essentials.php';
             </a>
           </div>
 
-          <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_12.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="site-section" id="portfolio2-section">
+      <div class="container">
+
+        <div class="row mb-3">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="mb-3">Graphic Designs</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div id="filters2" class="filters text-center button-group col-md-7">
+            <button class="btn btn-primary active" data-filter="*">All</button>
+            <button class="btn btn-primary" data-filter=".we">Web</button>
+            <button class="btn btn-primary" data-filter=".desig">Design</button>
+            <button class="btn btn-primary" data-filter=".bran">Brand</button>
+          </div>
+        </div>
+
+        <div id="posts2" class="row no-gutter">
+
+          <div class="item we col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
               <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_12.jpg">
+              <img class="img-fluid" src="images/img_9.jpg">
             </a>
           </div>
 
-          <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-            <a href="images/img_13.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+          <div class="item desig col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
               <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_13.jpg">
+              <img class="img-fluid" src="images/img_10.jpg">
+            </a>
+          </div>
+
+          <div class="item bran col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_11.jpg">
             </a>
           </div>
 
@@ -512,6 +232,97 @@ include 'essentials.php';
 
     </section>
 
+    <section class="site-section" id="portfolio3-section">
+      <div class="container">
+
+        <div class="row mb-3">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="mb-3">Social Media</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div id="filters3" class="filters text-center button-group col-md-7">
+            <button class="btn btn-primary active" data-filter="*">All</button>
+            <button class="btn btn-primary" data-filter=".we">Web</button>
+            <button class="btn btn-primary" data-filter=".desig">Design</button>
+            <button class="btn btn-primary" data-filter=".bran">Brand</button>
+          </div>
+        </div>
+
+        <div id="posts3" class="row no-gutter">
+
+          <div class="item we col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_9.jpg">
+            </a>
+          </div>
+
+          <div class="item desig col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_10.jpg">
+            </a>
+          </div>
+
+          <div class="item bran col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_11.jpg">
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="site-section" id="portfolio4-section">
+      <div class="container">
+
+        <div class="row mb-3">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="mb-3">Web Design & UI/UX</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div id="filters4" class="filters text-center button-group col-md-7">
+            <button class="btn btn-primary active" data-filter="*">All</button>
+            <button class="btn btn-primary" data-filter=".we">Web</button>
+            <button class="btn btn-primary" data-filter=".desig">Design</button>
+            <button class="btn btn-primary" data-filter=".bran">Brand</button>
+          </div>
+        </div>
+
+        <div id="posts4" class="row no-gutter">
+
+          <div class="item we col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_9.jpg">
+            </a>
+          </div>
+
+          <div class="item desig col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_10.jpg">
+            </a>
+          </div>
+
+          <div class="item bran col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/img_11.jpg">
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
 
     <section class="site-section border-bottom bg-light" id="services-section">
       <div class="container">
@@ -521,65 +332,45 @@ include 'essentials.php';
           </div>
         </div>
         <div class="row align-items-stretch">
+
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-startup"></span></div>
+              <div class="unit-4-icon">
+                <span class="text-primary">
+                  <i class="fa-solid fa-film"></i>
+                </span>
+              </div>
               <div>
                 <h3>Business Consulting</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-graphic-design"></span></div>
-              <div>
-                <h3>Market Analysis</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-settings"></span></div>
-              <div>
-                <h3>User Monitoring</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
               </div>
             </div>
           </div>
 
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <span class="text-primary">
+                  <i class="fa-regular fa-file-image"></i>
+                </span>
+              </div>
+              <div>
+                <h3>Business Consulting</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-idea"></span></div>
-              <div>
-                <h3>Insurance Consulting</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
+              <div class="unit-4-icon">
+                <span class="text-primary">
+                  <i class="fa-regular fa-closed-captioning"></i>
+                </span>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-smartphone"></span></div>
               <div>
-                <h3>Financial Investment</h3>
+                <h3>Business Consulting</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-head"></span></div>
-              <div>
-                <h3>Financial Management</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -655,222 +446,6 @@ include 'essentials.php';
 
       </div>
     </section>
-
-    <section class="site-section bg-light" id="pricing-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center" data-aos="fade-up">
-            <h2 class="section-title mb-3">Pricing</h2>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
-            <div class="pricing">
-              <h3 class="text-center text-black">Basic</h3>
-              <div class="price text-center mb-4 ">
-                <span><span>$47</span> / year</span>
-              </div>
-              <ul class="list-unstyled ul-check success mb-5">
-
-                <li>Officia quaerat eaque neque</li>
-                <li>Possimus aut consequuntur incidunt</li>
-                <li class="remove">Lorem ipsum dolor sit amet</li>
-                <li class="remove">Consectetur adipisicing elit</li>
-                <li class="remove">Dolorum esse odio quas architecto sint</li>
-              </ul>
-              <p class="text-center">
-                <a href="#" class="btn btn-secondary">Buy Now</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing">
-              <h3 class="text-center text-black">Premium</h3>
-              <div class="price text-center mb-4 ">
-                <span><span>$200</span> / year</span>
-              </div>
-              <ul class="list-unstyled ul-check success mb-5">
-
-                <li>Officia quaerat eaque neque</li>
-                <li>Possimus aut consequuntur incidunt</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipisicing elit</li>
-                <li class="remove">Dolorum esse odio quas architecto sint</li>
-              </ul>
-              <p class="text-center">
-                <a href="#" class="btn btn-primary">Buy Now</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing">
-              <h3 class="text-center text-black">Professional</h3>
-              <div class="price text-center mb-4 ">
-                <span><span>$750</span> / year</span>
-              </div>
-              <ul class="list-unstyled ul-check success mb-5">
-
-                <li>Officia quaerat eaque neque</li>
-                <li>Possimus aut consequuntur incidunt</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipisicing elit</li>
-                <li>Dolorum esse odio quas architecto sint</li>
-              </ul>
-              <p class="text-center">
-                <a href="#" class="btn btn-secondary">Buy Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row site-section" id="faq-section">
-          <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title">Frequently Ask Questions</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">Where are you from?</h3>
-              <p>Voluptatum nobis obcaecati perferendis dolor totam unde dolores quod maxime corporis officia et. Distinctio assumenda minima maiores.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What is your opening time?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="site-section" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-
-          <div class="col-lg-5 ml-auto mb-5 order-1 order-lg-2" data-aos="fade" data-aos="fade-up" data-aos-delay="">
-            <img src="images/about_1.jpg" alt="Image" class="img-fluid rounded">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade">
-
-            <div class="row">
-
-
-
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head"></span></div>
-                  <div>
-                    <h3>Web &amp; Mobile Specialties</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-smartphone"></span></div>
-                  <div>
-                    <h3>Intuitive Thinkers</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <section class="site-section" id="blog-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">Our Blog</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
-            <div class="h-entry">
-              <a href="single.html">
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              </a>
-              <h2 class="font-size-regular"><a href="#">Where Do You Learn HTML & CSS in 2019?</a></h2>
-              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="h-entry">
-              <a href="single.html">
-                <img src="images/img_4.jpg" alt="Image" class="img-fluid">
-              </a>
-              <h2 class="font-size-regular"><a href="#">Where Do You Learn HTML & CSS in 2019?</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="h-entry">
-              <a href="single.html">
-                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              </a>
-              <h2 class="font-size-regular"><a href="#">Where Do You Learn HTML & CSS in 2019?</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
 
     <section class="site-section bg-light" id="contact-section" data-aos="fade">
       <div class="container">
@@ -959,7 +534,6 @@ include 'essentials.php';
       </div>
     </section>
 
-
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -1032,7 +606,7 @@ include 'essentials.php';
   <script src="js/isotope.pkgd.min.js"></script>
 
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?<?php echo time(); ?>"></script>
 
 </body>
 

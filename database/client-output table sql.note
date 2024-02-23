@@ -1,0 +1,14 @@
+CREATE TABLE social_media_clients (
+    client_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_name VARCHAR(255) NOT NULL,
+    is_visible BOOLEAN NOT NULL DEFAULT 1,
+    date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE social_media_outputs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    link VARCHAR(255) NOT NULL,
+    is_visible BOOLEAN NOT NULL DEFAULT 1,
+    date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    client_id INT
+);

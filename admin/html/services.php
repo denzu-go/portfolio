@@ -393,9 +393,9 @@ include 'global/head.php';
 
         $('#editModal').modal('show');
         $('#constantId').val(id);
-        $('#iconEdit').val(link);
-        $('#titleEdit').val(link);
-        $('#textEdit').val(link);
+        $('#iconEdit').val(icon);
+        $('#titleEdit').val(title);
+        $('#textEdit').val(text);
         $('#linkEdit').val(link);
 
       });

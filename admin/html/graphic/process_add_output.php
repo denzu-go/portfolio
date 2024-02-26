@@ -2,14 +2,19 @@
 include '../../../database/connection.php'; // Include your database connection script
 
 // Check if the form data is received
-if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset($_POST['editClientSelect']) ) {
+if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset($_POST['editClientSelect'])) {
     // Collect form data
     $linkInput = $_POST['linkInput'];
     $newOutputVisibility = $_POST['newOutputVisibility'];
-    $editClientSelect = $_POST['editClientSelect'];
+
+    if ($editClientSelect == '') {
+        $editClientSelect = 0;
+    } else {
+        $$editClientSelect = $editClientSelect;
+    }
 
     // Insert the new client into the database
-    $sqlInsertOutput = "INSERT INTO graphic_outputs (link, is_visible, client_id, date_added) VALUES ('$linkInput', $newOutputVisibility, $editClientSelect, NOW())";
+    $sqlInsertOutput = "INSERT INTO graphic_outputs (link, is_visible, client_id) VALUES ('$linkInput', $newOutputVisibility, $editClientSelect)";
     if ($conn->query($sqlInsertOutput) === TRUE) {
         // If insertion is successful, return a success message
         echo 'Client added successfully';
@@ -24,4 +29,3 @@ if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset(
 
 // Close the database connection
 $conn->close();
-?>

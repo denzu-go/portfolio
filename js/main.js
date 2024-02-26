@@ -363,6 +363,12 @@ jQuery(document).ready(function ($) {
       isFitWidth: true,
     });
 
+    // Activate jquery isotope for the fifth section
+    var $container5 = $("#posts5").isotope({
+      itemSelector: ".item",
+      isFitWidth: true,
+    });
+
     $(window).resize(function () {
       $container1.isotope({
         columnWidth: ".col-sm-3",
@@ -376,12 +382,16 @@ jQuery(document).ready(function ($) {
       $container4.isotope({
         columnWidth: ".col-sm-3",
       });
+      $container5.isotope({
+        columnWidth: ".col-sm-3",
+      });
     });
 
     $container1.isotope({ filter: "*" });
     $container2.isotope({ filter: "*" });
     $container3.isotope({ filter: "*" });
     $container4.isotope({ filter: "*" });
+    $container5.isotope({ filter: "*" });
 
     // Filter items on button click for the first section
     $("#filters1").on("click", "button", function () {
@@ -412,6 +422,14 @@ jQuery(document).ready(function ($) {
       var filterValue = $(this).attr("data-filter");
       $container4.isotope({ filter: filterValue });
       $("#filters4 button").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    // Filter items on button click for the fifth section
+    $("#filters5").on("click", "button", function () {
+      var filterValue = $(this).attr("data-filter");
+      $container5.isotope({ filter: filterValue });
+      $("#filters5 button").removeClass("active");
       $(this).addClass("active");
     });
   };

@@ -6,10 +6,15 @@ if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset(
     // Collect form data
     $linkInput = $_POST['linkInput'];
     $newOutputVisibility = $_POST['newOutputVisibility'];
-    $editClientSelect = $_POST['editClientSelect'];
+    
+    if ($editClientSelect == ''){
+        $editClientSelect = 0;
+    } else {
+        $$editClientSelect = $editClientSelect;
+    }
 
     // Insert the new client into the database
-    $sqlInsertOutput = "INSERT INTO video_outputs (link, is_visible, client_id, date_added) VALUES ('$linkInput', $newOutputVisibility, $editClientSelect, NOW())";
+    $sqlInsertOutput = "INSERT INTO video_outputs (link, is_visible, client_id) VALUES ('$linkInput', $newOutputVisibility, $editClientSelect)";
     if ($conn->query($sqlInsertOutput) === TRUE) {
         // If insertion is successful, return a success message
         echo 'Client added successfully';

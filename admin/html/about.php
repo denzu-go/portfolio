@@ -124,7 +124,7 @@ include 'global/head.php';
                 <div class="mb-4">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title fw-semibold">Home</h5>
+                      <h5 class="card-title fw-semibold">About</h5>
                     </div>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ include 'global/head.php';
         responsive: true,
         scrollX: true,
         ajax: {
-          url: "constants_home/json_constants_table.php",
+          url: "constants_about/json_constants_table.php",
           data: {},
           dataSrc: ""
         },
@@ -296,7 +296,7 @@ include 'global/head.php';
 
         $.ajax({
           type: 'POST',
-          url: 'constants_home/process_edit_constant.php',
+          url: 'constants_about/process_edit_constant.php',
           data: formData,
           success: function(response) {
             $('#constantsTable').DataTable().ajax.reload();

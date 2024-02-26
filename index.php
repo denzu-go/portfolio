@@ -92,7 +92,7 @@ include 'essentials.php';
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">About Us</h2>
+            <h2 class="section-title mb-3">About Me</h2>
           </div>
         </div>
         <div class="row">
@@ -104,7 +104,7 @@ include 'essentials.php';
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <h3 class="h3 mb-4 text-black">For the next great business</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tempora cumque eligendi in nostrum labore omnis quaerat.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tempora cumque eligendi in nostrum labore omnis quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti animi ipsa architecto! Amet, quisquam reprehenderit. Perspiciatis iste veritatis pariatur ullam laboriosam porro aspernatur voluptate similique debitis cupiditate. Consequatur, facere earum?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non cum vitae rerum amet tenetur possimus soluta fugiat minima quasi consequatur numquam minus mollitia sint consequuntur facilis optio fuga praesentium excepturi sed repellat, debitis veniam odit error. Perspiciatis exercitationem eveniet sunt dolor, voluptatem quidem blanditiis praesentium suscipit natus facere ad quam!</p>
 
             </div>
 
@@ -451,7 +451,7 @@ include 'essentials.php';
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Contact Us</h2>
+            <h2 class="section-title mb-3">Contact Me</h2>
           </div>
         </div>
         <div class="row mb-5">
@@ -461,7 +461,7 @@ include 'essentials.php';
           <div class="col-md-4 text-center">
             <p class="mb-4">
               <span class="icon-room d-block h4 text-primary"></span>
-              <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+              <span>203 Fake St. Mountain View, San Francisco, California, MeA</span>
             </p>
           </div>
           <div class="col-md-4 text-center">
@@ -540,20 +540,20 @@ include 'essentials.php';
           <div class="col-md-9">
             <div class="row">
               <div class="col-md-5">
-                <h2 class="footer-heading mb-4">About Us</h2>
+                <h2 class="footer-heading mb-4">About Me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
               </div>
               <div class="col-md-3 ml-auto">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="#about-section" class="smoothscroll">About Me</a></li>
                   <li><a href="#services-section" class="smoothscroll">Services</a></li>
                   <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
-                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact Me</a></li>
                 </ul>
               </div>
               <div class="col-md-3">
-                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <h2 class="footer-heading mb-4">Follow Me</h2>
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>

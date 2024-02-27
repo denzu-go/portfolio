@@ -4,7 +4,17 @@
             <div class="col">
                 <div class="">
                     <span class="small">
-                        Thank You for viewing my Portfolio <i class="icon-heart text-danger" aria-hidden="true"></i>
+                        <?php
+                        $sql = "SELECT * FROM constants_footer WHERE title = 'footer text'";
+                        $result = $conn->query($sql);
+                        while ($fetched = $result->fetch_assoc()) {
+                            $show = $fetched['text'];
+
+                            echo '
+                                '.$show.' <i class="icon-heart text-danger" aria-hidden="true"></i>
+                            ';
+                        }
+                        ?>
                     </span>
                 </div>
             </div>

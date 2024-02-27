@@ -124,7 +124,7 @@ include 'global/head.php';
                 <div class="mb-4">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title fw-semibold">About</h5>
+                      <h5 class="card-title fw-semibold">Home</h5>
                     </div>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ include 'global/head.php';
         responsive: true,
         scrollX: true,
         ajax: {
-          url: "constants_about/json_constants_table.php",
+          url: "constants_footer/json_constants_table.php",
           data: {},
           dataSrc: ""
         },
@@ -251,13 +251,11 @@ include 'global/head.php';
         var id = $(this).data('id');
         var title = $(this).data('title');
         var text = $(this).data('text');
-        var instruction = $(this).data('instruction');
 
         $('#constantId').val(id);
 
         $('#title').val(title);
         $('#editModal').find('#modal-title').text('Edit ' + title);
-        $('#editModal').find('#modal-subtitle').text('(' + instruction + ')');
 
         $('#text').val(text);
 
@@ -296,7 +294,7 @@ include 'global/head.php';
 
         $.ajax({
           type: 'POST',
-          url: 'constants_about/process_edit_constant.php',
+          url: 'constants_footer/process_edit_constant.php',
           data: formData,
           success: function(response) {
             $('#constantsTable').DataTable().ajax.reload();

@@ -115,6 +115,7 @@ include 'global/head.php';
       <?php include 'global/header.php'; ?>
 
       <div class="container-fluid">
+        <h5 class="card-title fw-semibold">Graphic Design</h5>
 
         <div class="row">
 
@@ -565,7 +566,7 @@ include 'global/head.php';
             iziToast.success({
               color: 'green',
               progressBarColor: '#0c344e',
-              title: 'Client Details Updated Successfully',
+              title: 'Updated Successfully',
               message: '',
               titleColor: '#0c344e',
               messageColor: '#0c344e',
@@ -819,7 +820,7 @@ include 'global/head.php';
             iziToast.success({
               color: 'green',
               progressBarColor: '#0c344e',
-              title: 'Client Details Updated Successfully',
+              title: 'Updated Successfully',
               message: '',
               titleColor: '#0c344e',
               messageColor: '#0c344e',

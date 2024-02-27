@@ -303,7 +303,7 @@ include 'global/head.php';
             iziToast.success({
               color: 'green',
               progressBarColor: '#0c344e',
-              title: 'Client Details Updated Successfully',
+              title: 'Updated Successfully',
               message: '',
               titleColor: '#0c344e',
               messageColor: '#0c344e',

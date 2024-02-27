@@ -55,6 +55,13 @@ include 'global/head.php';
   .btn:hover {
     background-color: #777;
   }
+
+  @media (max-width: 576px) {
+    #videoFrame {
+      width: 100%;
+      height: 500px;
+    }
+  }
 </style>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -162,7 +169,7 @@ include 'global/head.php';
             $show = $fetched['text'];
 
             echo '
-            <img src="'.$show.'" alt="" style="max-width: 100%;">
+            <img src="' . $show . '" alt="" style="max-width: 100%;">
             ';
           }
           ?>
@@ -253,17 +260,35 @@ include 'global/head.php';
         $result = $conn->query($sql);
         while ($fetched = $result->fetch_assoc()) {
           $link = $fetched['link'];
+          $is_portrait = $fetched['is_portrait'];
           $is_visible = $fetched['is_visible'];
           $date_added = $fetched['date_added'];
           $client_id = $fetched['client_id'];
 
-          echo '
+          if ($is_portrait) {
+            $show = '
             <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                <a href="' . $link . '" class="item-wrap fancybox" data-fancybox="gallery2">
-                    <span class="icon-search2"></span>
-                    <img class="img-fluid" src="' . $link . '">
-                </a>
+              <iframe id="videoFrame"
+                width="70%" height="300px"
+                src="https://www.youtube.com/embed/'.$link.'" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture;
+                web-share"
+                allowfullscreen>
+              </iframe>
+            </div>        
+            ';
+          } else {
+            $show = '
+            <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+              <iframe width="100%" src="' . $link . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            ';
+          }
+
+          echo '
+            ' . $show . '
             ';
         }
         ?>

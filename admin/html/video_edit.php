@@ -306,6 +306,10 @@ include 'global/head.php';
               <input type="text" class="form-control" id="linkInput" required>
             </div>
             <div class="mb-3 form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="newPortrait">
+              <label class="form-check-label" for="newPortrait">is this a reel? (portrait)</label>
+            </div>
+            <div class="mb-3 form-check form-switch">
               <input type="checkbox" class="form-check-input" id="newOutputVisibility" checked>
               <label class="form-check-label" for="newClientVisibility">Output Visibility</label>
             </div>
@@ -348,6 +352,11 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="editDate" class="form-label">Edit Date</label>
               <input type="date" class="form-control" id="date_added_output">
+            </div>
+
+            <div class="mb-3 form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="outputPortrait">
+              <label class="form-check-label" for="outputPortrait">is this a reel? (portrait)</label>
             </div>
 
             <div class="mb-3 form-check form-switch">
@@ -658,7 +667,8 @@ include 'global/head.php';
       $("#addOutput").click(function() {
         // Collect form data
         var linkInput = $("#linkInput").val();
-        var newOutputVisibility = $("#newOutputVisibility").prop('checked') ? 1 : 0; // Convert boolean to integer
+        var newOutputVisibility = $("#newOutputVisibility").prop('checked') ? 1 : 0;
+        var newPortrait = $("#newPortrait").prop('checked') ? 1 : 0;
         var editClientSelect = $("#editClientSelect").val();
 
         // Validate Client Name
@@ -683,7 +693,8 @@ include 'global/head.php';
           data: {
             linkInput: linkInput,
             newOutputVisibility: newOutputVisibility,
-            editClientSelect: editClientSelect
+            newPortrait: newPortrait,
+            editClientSelect: editClientSelect,
           },
           success: function(response) {
             $('#clientsTable').DataTable().ajax.reload();
@@ -733,6 +744,7 @@ include 'global/head.php';
       $('#outputsTable').on('click', '#edit_output', function() {
         var output_id = $(this).data('output_id');
         var link = $(this).data('link');
+        var is_portrait = $(this).data('is_portrait');
         var is_visible = $(this).data('is_visible');
         var date_added_output = $(this).data('date_added');
         var output_client_id = $(this).data('client_id');
@@ -745,6 +757,7 @@ include 'global/head.php';
         $('#outputId').val(output_id);
 
         $('#link').val(link);
+        $('#outputPortrait').prop('checked', is_portrait === 1);
         $('#outputVisibility').prop('checked', is_visible === 1);
 
         // Set the value of the date input to the extracted date
@@ -764,7 +777,7 @@ include 'global/head.php';
           ajax: {
             url: "video/dropdown_output_table.php",
             data: {
-              selectedClient: selectedClient // Pass selectedClient to the server
+              selectedClient: selectedClient
             },
             dataSrc: ""
           },
@@ -781,6 +794,7 @@ include 'global/head.php';
 
         var outputId = $('#outputId').val();
         var link = $('#link').val().trim();
+        var outputPortrait = ($('#outputPortrait').prop('checked')) ? 1 : 0;
         var outputVisibility = ($('#outputVisibility').prop('checked')) ? 1 : 0;
         var date_added_output = $('#date_added_output').val();
         var clientSelect = $("#clientSelect").val();
@@ -804,6 +818,7 @@ include 'global/head.php';
         var formData = {
           outputId: outputId,
           link: link,
+          outputPortrait: outputPortrait,
           outputVisibility: outputVisibility,
           date_added_output: date_added_output,
           clientSelect: clientSelect,

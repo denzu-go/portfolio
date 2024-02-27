@@ -10,6 +10,7 @@ $number = 1;
 while ($fetched = $result->fetch_assoc()) {
     $output_id = $fetched['id'];
     $link = $fetched['link'];
+    $is_portrait = $fetched['is_portrait'];
     $is_visible = $fetched['is_visible'];
     $date_added = $fetched['date_added'];
     $client_id = $fetched['client_id'];
@@ -55,7 +56,7 @@ while ($fetched = $result->fetch_assoc()) {
     ';
 
     $show_actions = '
-        <i id="edit_output" class="fas fa-pen btn text-secondary p-2 m-0" data-output_id="' . $output_id . '" data-link="' . $link . '" data-is_visible="' . $is_visible . '" data-date_added="' . $date_added . '" data-client_id="' . $client_id . '"></i>
+        <i id="edit_output" class="fas fa-pen btn text-secondary p-2 m-0" data-output_id="' . $output_id . '" data-link="' . $link . '" data-is_portrait="' . $is_portrait . '" data-is_visible="' . $is_visible . '" data-date_added="' . $date_added . '" data-client_id="' . $client_id . '"></i>
         
         <i id="delete_output" data-output_id="' . $output_id . '" class="fas fa-trash btn text-danger p-2 m-0"></i>
     ';

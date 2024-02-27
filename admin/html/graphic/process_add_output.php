@@ -7,14 +7,16 @@ if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset(
     $linkInput = $_POST['linkInput'];
     $newOutputVisibility = $_POST['newOutputVisibility'];
 
+    $editClientSelect = $_POST['editClientSelect'];
+
     if ($editClientSelect == '') {
-        $editClientSelect = 0;
+        $edit_client_select = 0;
     } else {
-        $$editClientSelect = $editClientSelect;
+        $edit_client_select = $editClientSelect;
     }
 
     // Insert the new client into the database
-    $sqlInsertOutput = "INSERT INTO graphic_outputs (link, is_visible, client_id) VALUES ('$linkInput', $newOutputVisibility, $editClientSelect)";
+    $sqlInsertOutput = "INSERT INTO graphic_outputs (link, is_visible, client_id) VALUES ('$linkInput', $newOutputVisibility, $edit_client_select)";
     if ($conn->query($sqlInsertOutput) === TRUE) {
         // If insertion is successful, return a success message
         echo 'Client added successfully';

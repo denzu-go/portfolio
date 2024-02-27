@@ -270,7 +270,7 @@ include 'global/head.php';
             <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <iframe id="videoFrame"
                 width="70%" height="300px"
-                src="https://www.youtube.com/embed/'.$link.'" 
+                src="https://www.youtube.com/embed/' . $link . '" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
                 gyroscope; picture-in-picture;
@@ -700,6 +700,15 @@ include 'global/head.php';
   <?php
   include 'global/scripts.php';
   ?>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+      if (disclaimer) {
+        disclaimer.remove();
+      }
+    });
+  </script>
 
   <script>
     document.addEventListener("scroll", function() {

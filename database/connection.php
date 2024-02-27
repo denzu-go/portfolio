@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$database_name = 'portfolio_denzel';
+$database_name = 'portfolio_db';
 
 // Create a connection
 $conn = mysqli_connect($hostname, $username, $password, $database_name);

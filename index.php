@@ -44,7 +44,6 @@ include 'global/head.php';
     }
   }
 
-
   .btn-group-sm>.btn,
   .btn-sm {
     line-height: 1;
@@ -60,6 +59,13 @@ include 'global/head.php';
     #videoFrame {
       width: 100%;
       height: 500px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    #videoFrameLands {
+      width: 100%;
+      height: 200px;
     }
   }
 </style>
@@ -282,7 +288,7 @@ include 'global/head.php';
           } else {
             $show = '
             <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <iframe width="100%" src="' . $link . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe id="videoFrameLands" width="100%" src="' . $link . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             ';
           }

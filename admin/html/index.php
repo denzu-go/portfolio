@@ -180,11 +180,15 @@ include 'global/head.php';
             <input type="hidden" id="constantId">
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
-              <label for="link" class="form-label">Link</label>
               <input type="text" class="form-control" id="text" required>
-              <em>
-                <p class="small text-muted font-italic" id="modal-subtitle"></p>
-              </em>
+              <div id="instruction">
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle">
+                    <a href="" target="_blank">click this to watch tutorial</a>
+                  </p>
+                </em>
+              </div>
+
             </div>
 
 
@@ -246,7 +250,7 @@ include 'global/head.php';
         ]
       });
 
-
+      
       $('#constantsTable').on('click', '#edit_constant', function() {
         var id = $(this).data('id');
         var title = $(this).data('title');
@@ -254,15 +258,24 @@ include 'global/head.php';
         var instruction = $(this).data('instruction');
 
         $('#constantId').val(id);
-
         $('#title').val(title);
-        $('#editModal').find('#modal-title').text('Edit ' + title);
-        $('#editModal').find('#modal-subtitle').text('(' + instruction + ')');
-
         $('#text').val(text);
+
+        // Set the modal title
+        $('#editModal #modal-title').text('Edit ' + title);
+
+        if (instruction && instruction !== '') {
+          var instructionLink = instruction;
+          $('#instruction a').attr('href', instructionLink);
+          $('#instruction').show(); // Show the instruction div
+        } else {
+          $('#instruction').hide(); // Hide the instruction div
+        }
 
         $('#editModal').modal('show');
       });
+
+
 
 
 
@@ -323,7 +336,7 @@ include 'global/head.php';
 
 
 
-  
+
 
 
 

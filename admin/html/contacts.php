@@ -187,9 +187,20 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="linkInput" class="form-label">Icon:</label>
               <input type="text" class="form-control" id="iconInput" required>
-              <em>
-                <p class="small text-muted font-italic" id="modal-instruction">copy and paste from fontawesome</p>
-              </em>
+              <?php
+              $sql = "SELECT * FROM tutorials WHERE title = 'fontawesome'";
+              $result = $conn->query($sql);
+              while ($fetched = $result->fetch_assoc()) {
+                $link = $fetched['link'];
+
+                echo '
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial on how to get icons from fontawesome</a></p>
+                </em>
+                ';
+              }
+              ?>
+
             </div>
 
             <div class="mb-3">
@@ -229,9 +240,19 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="linkEdit" class="form-label">Icon:</label>
               <input type="text" class="form-control" id="iconEdit" required>
-              <em>
-                <p class="small text-muted font-italic" id="modal-instruction">copy and paste from fontawesome</p>
-              </em>
+              <?php
+              $sql = "SELECT * FROM tutorials WHERE title = 'fontawesome'";
+              $result = $conn->query($sql);
+              while ($fetched = $result->fetch_assoc()) {
+                $link = $fetched['link'];
+
+                echo '
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial on how to get icons from fontawesome</a></p>
+                </em>
+                ';
+              }
+              ?>
             </div>
 
             <div class="mb-3">

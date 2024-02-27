@@ -33,17 +33,27 @@ while ($fetched = $result->fetch_assoc()) {
         ';
     }
 
+    if ($is_portrait == 1) {
+        $add_icon = '
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        ';
+    } else {
+        $add_icon = '
+        <i class="fa-solid fa-panorama"></i>
+        ';
+    }
+
 
     if ($client_id == 0) {
         $show_client_id = '
             <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-0 small ellipsis" data-toggle="tooltip" title="N/A">N/A</h6>
+                '.$add_icon.' <h6 class="fw-semibold mb-0 small ellipsis" data-toggle="tooltip" title="N/A">N/A</h6>
             </td>
         ';
     } else {
         $show_client_id = '
             <td class="border-bottom-0">
-                <h6 class="fw-semibold mb-0 ellipsis small" data-toggle="tooltip" title="'.$client_name.'">' . $client_name . '</h6>
+                '.$add_icon.' <h6 class="fw-semibold mb-0 ellipsis small" data-toggle="tooltip" title="' . $client_name . '">' . $client_name . '</h6>
             </td>
         ';
     }
@@ -69,7 +79,7 @@ while ($fetched = $result->fetch_assoc()) {
     ';
 
     $show_link = '
-    <span class="small ellipsis" data-toggle="tooltip" title="'.$link.'">' . $link . '</span>
+        <span class="small ellipsis" data-toggle="tooltip" title="' . $link . '">' . $link . '</span>
     ';
 
 

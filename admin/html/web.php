@@ -234,6 +234,9 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="editDate" class="form-label">Edit Date</label>
               <input type="date" class="form-control" id="date_added_client">
+              <em>
+                <p class="small text-muted font-italic" id="modal-subtitle">the sorting is based on the date (latest appearing at the top)</p>
+              </em>
             </div>
             <div class="mb-3 form-check form-switch">
               <input type="checkbox" class="form-check-input" id="clientVisibility">
@@ -304,6 +307,19 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="linkInput" class="form-label">Link:</label>
               <input type="text" class="form-control" id="linkInput" required>
+              <?php
+              $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
+              $result = $conn->query($sql);
+              while ($fetched = $result->fetch_assoc()) {
+                $link = $fetched['link'];
+
+                echo '
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                </em>
+                ';
+              }
+              ?>
             </div>
             <div class="mb-3 form-check form-switch">
               <input type="checkbox" class="form-check-input" id="newOutputVisibility" checked>
@@ -335,6 +351,19 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="link" class="form-label">Link</label>
               <input type="text" class="form-control" id="link" required>
+              <?php
+              $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
+              $result = $conn->query($sql);
+              while ($fetched = $result->fetch_assoc()) {
+                $link = $fetched['link'];
+
+                echo '
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                </em>
+                ';
+              }
+              ?>
             </div>
 
             <div class="mb-3">
@@ -348,6 +377,9 @@ include 'global/head.php';
             <div class="mb-3">
               <label for="editDate" class="form-label">Edit Date</label>
               <input type="date" class="form-control" id="date_added_output">
+              <em>
+                <p class="small text-muted font-italic" id="modal-subtitle">the sorting is based on the date (latest appearing at the top)</p>
+              </em>
             </div>
 
             <div class="mb-3 form-check form-switch">

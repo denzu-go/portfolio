@@ -180,7 +180,6 @@ include 'global/head.php';
             <input type="hidden" id="constantId">
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
-              <label for="link" class="form-label">Link</label>
               <input type="text" class="form-control" id="text" required>
               <em>
                 <p class="small text-muted font-italic" id="modal-subtitle"></p>
@@ -257,7 +256,7 @@ include 'global/head.php';
 
         $('#title').val(title);
         $('#editModal').find('#modal-title').text('Edit ' + title);
-        $('#editModal').find('#modal-subtitle').text('(' + instruction + ')');
+        $('#editModal').find('#modal-subtitle').text(instruction);
 
         $('#text').val(text);
 

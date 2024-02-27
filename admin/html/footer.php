@@ -136,7 +136,7 @@ include 'global/head.php';
                         <h6 class="fw-semibold mb-0 small">Category</h6>
                       </th>
                       <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">Text / Link</h6>
+                        <h6 class="fw-semibold mb-0">Text</h6>
                       </th>
                       <th class="border-bottom-0">
                         <h6 class="fw-semibold mb-0">Actions</h6>
@@ -180,7 +180,6 @@ include 'global/head.php';
             <input type="hidden" id="constantId">
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
-              <label for="link" class="form-label">Link</label>
               <input type="text" class="form-control" id="text" required>
               <em>
                 <p class="small text-muted font-italic" id="modal-subtitle"></p>

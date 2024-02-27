@@ -1,7 +1,6 @@
 <?php
 
-include 'connection.php';
-include 'html/header.html.php';
+include '../../database/connection.php';
 session_start();
 
 session_unset();

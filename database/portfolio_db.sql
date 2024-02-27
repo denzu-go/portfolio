@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2024 at 07:10 AM
+-- Generation Time: Feb 27, 2024 at 01:58 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -82,9 +82,9 @@ CREATE TABLE `constants_about` (
 --
 
 INSERT INTO `constants_about` (`id`, `title`, `instruction`, `text`) VALUES
-(1, 'heading', 'paragraph about you', 'dasdasdasd'),
-(2, 'text', NULL, 'ako si'),
-(3, 'picture', NULL, 'https://img.hotimg.com/WIN_20240217_22_36_15_Pro.jpeg');
+(1, 'heading', '', 'dasdasdasd'),
+(2, 'text', '', 'ako si'),
+(3, 'picture', 'paste image address link', 'https://img.hotimg.com/WIN_20240217_22_36_15_Pro.jpeg');
 
 -- --------------------------------------------------------
 
@@ -145,11 +145,11 @@ CREATE TABLE `constants_home` (
 --
 
 INSERT INTO `constants_home` (`id`, `title`, `instruction`, `text`) VALUES
-(1, 'name logo', 'asdad', 'Denzu'),
-(2, 'welcome', 'text', 'Hello!'),
-(3, 'texts below welcome', 'text', 'Ako si Nicole'),
-(4, 'button text', 'text', 'contact m1e'),
-(5, 'background image', 'image link address', 'https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/411815549_2730494337102743_3580538383150399030_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeEmQJnHv4u00d49ydu4EN5oW2XX4Dj-oh9bZdfgOP6iHxRSGUfw2LnIWoiOm0kr3kVrx-Z-RcQgjRej6ApXWnim&_nc_ohc=UXvWT0iem0oAX9mxYj6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfDNXa_gG40IRSXAnPmyDGhJ4WSubRj8Fx7TcKLB5E33-Q&oe=65E28F90');
+(1, 'name logo', '', 'Denzu'),
+(2, 'welcome', '', 'Hello!'),
+(3, 'texts below welcome', '', 'Ako si Nicole'),
+(4, 'button text', '', 'contact m1e'),
+(5, 'background image', 'https://www.facebook.com/', 'https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/411815549_2730494337102743_3580538383150399030_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeEmQJnHv4u00d49ydu4EN5oW2XX4Dj-oh9bZdfgOP6iHxRSGUfw2LnIWoiOm0kr3kVrx-Z-RcQgjRej6ApXWnim&_nc_ohc=UXvWT0iem0oAX9mxYj6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfDNXa_gG40IRSXAnPmyDGhJ4WSubRj8Fx7TcKLB5E33-Q&oe=65E28F90');
 
 -- --------------------------------------------------------
 
@@ -276,6 +276,34 @@ CREATE TABLE `social_media_outputs` (
   `client_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `social_media_outputs`
+--
+
+INSERT INTO `social_media_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
+(6, 'asd', 1, '2024-02-27 09:35:59', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tutorials`
+--
+
+CREATE TABLE `tutorials` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `link` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tutorials`
+--
+
+INSERT INTO `tutorials` (`id`, `title`, `link`) VALUES
+(1, 'video', 'https://www.youtube.com/watch?v=IGWtNqeZMp0'),
+(2, 'graphics', 'https://www.youtube.com/watch?v=G86V5loIsSM'),
+(3, 'fontawesome', 'https://www.youtube.com/watch?v=G86V5loIsSM');
+
 -- --------------------------------------------------------
 
 --
@@ -317,8 +345,8 @@ CREATE TABLE `video_outputs` (
 --
 
 INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `is_portrait`, `date_added`, `client_id`) VALUES
-(46, 'MBaVan03m-k', 1, 1, '2024-02-26 16:00:00', 86),
-(47, 'https://www.youtube.com/embed/74pvXZ_SbqM?si=jNB60LvxV7Z3orgp', 1, 0, '2024-02-27 06:09:17', 87);
+(46, 'MBaVan03m-k', 1, 1, '2024-02-04 16:00:00', 86),
+(47, 'https://www.youtube.com/embed/IGWtNqeZMp0?si=rzm-eDrKNoYVOyWi', 1, 0, '2024-02-26 16:00:00', 87);
 
 -- --------------------------------------------------------
 
@@ -440,6 +468,12 @@ ALTER TABLE `social_media_outputs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tutorials`
+--
+ALTER TABLE `tutorials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `video_clients`
 --
 ALTER TABLE `video_clients`
@@ -537,7 +571,7 @@ ALTER TABLE `social_media_clients`
 -- AUTO_INCREMENT for table `social_media_outputs`
 --
 ALTER TABLE `social_media_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `video_clients`

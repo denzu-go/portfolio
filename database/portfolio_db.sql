@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2024 at 05:42 AM
+-- Generation Time: Feb 27, 2024 at 07:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -60,7 +60,9 @@ CREATE TABLE `brand_logo_outputs` (
 --
 
 INSERT INTO `brand_logo_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(1, 'https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/429668849_379657438269069_1790110676605181067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHiaZjKQuxTIpa13tsSrURuqRF-JzsH4rKpEX4nOwfishCOSzvttcypeH_cr7wgZ3H40d-fcfkqw9Nv0JpEZuKt&_nc_ohc=Ki14IdWNT00AX_-QUeU&_nc_ht=scontent.fmnl33-3.fna&oh=00_AfDJNCEeP6dpL7u6Ocy5dLBeFZSq-7od3Fp0uEgxSYQnRw&oe=65E06D62', 1, '2024-02-25 16:00:00', 1);
+(1, 'https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/429668849_379657438269069_1790110676605181067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHiaZjKQuxTIpa13tsSrURuqRF-JzsH4rKpEX4nOwfishCOSzvttcypeH_cr7wgZ3H40d-fcfkqw9Nv0JpEZuKt&_nc_ohc=Ki14IdWNT00AX_-QUeU&_nc_ht=scontent.fmnl33-3.fna&oh=00_AfDJNCEeP6dpL7u6Ocy5dLBeFZSq-7od3Fp0uEgxSYQnRw&oe=65E06D62', 1, '2024-02-25 16:00:00', 1),
+(2, 'dfs', 1, '2024-02-26 16:00:00', 1),
+(3, 'sdf', 1, '2024-02-26 16:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -236,8 +238,8 @@ CREATE TABLE `graphic_outputs` (
 --
 
 INSERT INTO `graphic_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(2, 'https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/429658642_379752864926193_8735903230393719578_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGdbGFbjUdbuuwghmQ1Wz32QXVTNPkXMsJBdVM0-RcywuRd0GZZph53ytBSb30Vyzoa_uiX-OsAVSEpo0ogq6TE&_nc_ohc=mUbDv-CygrIAX8bUodh&_nc_ht=scontent.fmnl33-5.fna&oh=00_AfBtGC5jT8sXOskJ2OBpH9uspYjuOOjyL9ckJk4kwngSdg&oe=65E20E56', 1, '2024-02-25 16:00:00', 1),
-(3, 'd', 1, '2024-02-26 11:45:15', 0);
+(7, 'asd', 1, '2024-02-27 06:05:34', 0),
+(8, 'asd', 1, '2024-02-27 06:05:38', 1);
 
 -- --------------------------------------------------------
 
@@ -274,15 +276,6 @@ CREATE TABLE `social_media_outputs` (
   `client_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `social_media_outputs`
---
-
-INSERT INTO `social_media_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(1, 'https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/429861315_379720674929412_8741369952993295736_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeH7l87lMJ-uqSUNGkDujOWMNHrZ2_4IeDY0etnb_gh4NiGN4_LRWeoRZ4abDNFgxaqPtdTycxRnqyDkqHdp8kDl&_nc_ohc=mNEvftE16HAAX80IUr3&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfDjYghszQVGLgxUXe8dQPHR7cAlbsSAl2Z-RvpQhXYaqg&oe=65E0E754', 1, '2024-02-26 11:37:48', 1),
-(2, 'https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/429668849_379657438269069_1790110676605181067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHiaZjKQuxTIpa13tsSrURuqRF-JzsH4rKpEX4nOwfishCOSzvttcypeH_cr7wgZ3H40d-fcfkqw9Nv0JpEZuKt&_nc_ohc=Ki14IdWNT00AX_-QUeU&_nc_ht=scontent.fmnl33-3.fna&oh=00_AfDJNCEeP6dpL7u6Ocy5dLBeFZSq-7od3Fp0uEgxSYQnRw&oe=65E06D62', 1, '2024-02-25 16:00:00', 0),
-(3, 'd', 1, '2024-02-26 11:45:27', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -301,8 +294,8 @@ CREATE TABLE `video_clients` (
 --
 
 INSERT INTO `video_clients` (`client_id`, `client_name`, `is_visible`, `date_added`) VALUES
-(83, 'reels', 1, '2026-02-04 16:00:00'),
-(84, 'long form', 1, '2024-02-26 11:24:02');
+(86, 'reels', 1, '2024-02-27 06:08:50'),
+(87, 'long form', 1, '2024-02-27 06:08:53');
 
 -- --------------------------------------------------------
 
@@ -314,6 +307,7 @@ CREATE TABLE `video_outputs` (
   `id` int(11) NOT NULL,
   `link` text DEFAULT NULL,
   `is_visible` tinyint(4) DEFAULT 1,
+  `is_portrait` tinyint(4) NOT NULL DEFAULT 0,
   `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
   `client_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -322,10 +316,9 @@ CREATE TABLE `video_outputs` (
 -- Dumping data for table `video_outputs`
 --
 
-INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(30, 'https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/430075880_941594713988972_4066310638337336263_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGaUGUHK7X-LBB9VpBfseu9vepHI4kER7q96kcjiQRHuo46x2HnlQ20KnLnWcSsa9hjHrtfs0CnBUSPnOuOhvl4&_nc_ohc=z4rwsm8BdDhttps://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/430075880_941594713988972_4066310638337336263_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeGaUGUHK7X-LBB9VpBfseu9vepHI4kER7q96kcjiQRHuo46x2HnlQ20KnLnWcSsa9hjHrtfs0CnBUSPnOuOhvl4&_nc_ohc=z4rwsm8BdDcAX8YFLP8&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfA8pTx9y79HPrxgxISeLdVYPzpw2j4KsikrS5H9Q3kFZw&oe=65E24B01', 1, '2020-11-23 16:00:00', 83),
-(31, 'https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/428687611_941947797286997_4816955857697989624_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeF4E4QG138ggEaQON1iY8jEqDODXKPCLXCoM4Nco8ItcGIn7RPB6mUUVKJ_YNKuFhvITgo4kVX81v4auNmKhlKH&_nc_ohc=pRR95PpyLsMAX_dP3Pc&_nc_ht=scontent.fmnl33-6.fna&oh=00_AfCuRxuhEiK1jqGEChzYp-NBx2hbp0KwxHJh3ix7Pi1HiQ&oe=65E15BF0', 1, '2029-09-24 16:00:00', 84),
-(32, 'd', 1, '2024-02-26 11:45:20', 0);
+INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `is_portrait`, `date_added`, `client_id`) VALUES
+(46, 'MBaVan03m-k', 1, 1, '2024-02-26 16:00:00', 86),
+(47, 'https://www.youtube.com/embed/74pvXZ_SbqM?si=jNB60LvxV7Z3orgp', 1, 0, '2024-02-27 06:09:17', 87);
 
 -- --------------------------------------------------------
 
@@ -339,6 +332,13 @@ CREATE TABLE `web_clients` (
   `is_visible` tinyint(1) NOT NULL DEFAULT 1,
   `date_added` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `web_clients`
+--
+
+INSERT INTO `web_clients` (`client_id`, `client_name`, `is_visible`, `date_added`) VALUES
+(1, 'dsa', 1, '2024-02-27 06:07:55');
 
 -- --------------------------------------------------------
 
@@ -359,7 +359,9 @@ CREATE TABLE `web_outputs` (
 --
 
 INSERT INTO `web_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(1, 'https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/429668849_379657438269069_1790110676605181067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHiaZjKQuxTIpa13tsSrURuqRF-JzsH4rKpEX4nOwfishCOSzvttcypeH_cr7wgZ3H40d-fcfkqw9Nv0JpEZuKt&_nc_ohc=Ki14IdWNT00AX_-QUeU&_nc_ht=scontent.fmnl33-3.fna&oh=00_AfDJNCEeP6dpL7u6Ocy5dLBeFZSq-7od3Fp0uEgxSYQnRw&oe=65E06D62', 1, '2024-02-25 16:00:00', 0);
+(1, 'https://scontent.fmnl33-3.fna.fbcdn.net/v/t39.30808-6/429668849_379657438269069_1790110676605181067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeHiaZjKQuxTIpa13tsSrURuqRF-JzsH4rKpEX4nOwfishCOSzvttcypeH_cr7wgZ3H40d-fcfkqw9Nv0JpEZuKt&_nc_ohc=Ki14IdWNT00AX_-QUeU&_nc_ht=scontent.fmnl33-3.fna&oh=00_AfDJNCEeP6dpL7u6Ocy5dLBeFZSq-7od3Fp0uEgxSYQnRw&oe=65E06D62', 1, '2024-02-25 16:00:00', 0),
+(2, 'asd', 1, '2024-02-27 06:07:50', 0),
+(3, 'd', 1, '2024-02-27 06:07:58', 1);
 
 --
 -- Indexes for dumped tables
@@ -475,7 +477,7 @@ ALTER TABLE `brand_logo_clients`
 -- AUTO_INCREMENT for table `brand_logo_outputs`
 --
 ALTER TABLE `brand_logo_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `constants_about`
@@ -523,7 +525,7 @@ ALTER TABLE `graphic_clients`
 -- AUTO_INCREMENT for table `graphic_outputs`
 --
 ALTER TABLE `graphic_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `social_media_clients`
@@ -535,31 +537,31 @@ ALTER TABLE `social_media_clients`
 -- AUTO_INCREMENT for table `social_media_outputs`
 --
 ALTER TABLE `social_media_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `video_clients`
 --
 ALTER TABLE `video_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `video_outputs`
 --
 ALTER TABLE `video_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `web_clients`
 --
 ALTER TABLE `web_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `web_outputs`
 --
 ALTER TABLE `web_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

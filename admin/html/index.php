@@ -180,7 +180,7 @@ include 'global/head.php';
             <input type="hidden" id="constantId">
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
-              <input type="text" class="form-control" id="text" required>
+              <textarea type="text" class="form-control" id="text" required></textarea>
               <div id="instruction">
                 <em>
                   <p class="small text-muted font-italic" id="modal-subtitle">

@@ -266,12 +266,12 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">Text:</label>
-              <input type="text" class="form-control" id="textEdit" required>
+              <textarea type="text" class="form-control" id="textEdit" required></textarea>
             </div>
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">External Link:</label>
-              <input type="text" class="form-control" id="linkEdit" required>
+              <textarea type="text" class="form-control" id="linkEdit" required></textarea>
             </div>
 
             <button type="button" class="btn btn-primary" id="saveEditOutput">Save Changes</button>

@@ -8,6 +8,9 @@ if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['text']
     $text = $_POST['text'];
     $link = $_POST['link'];
 
+    $text =   htmlspecialchars($text);
+    $link =   htmlspecialchars($link);
+
 
     $sqlUpdateOutput = "UPDATE constants_contacts SET icon = '$icon', text = '$text', link = '$link' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);

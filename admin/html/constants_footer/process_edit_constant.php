@@ -5,6 +5,8 @@ if (isset($_POST['id']) && isset($_POST['text'])) {
     $id = $_POST['id'];
     $text = $_POST['text'];
 
+    $text =   htmlspecialchars($text);
+
     $sqlUpdateOutput = "UPDATE constants_footer SET text = '$text' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);
 

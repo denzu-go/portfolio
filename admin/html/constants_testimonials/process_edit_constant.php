@@ -1,7 +1,7 @@
 <?php
 include '../../../database/connection.php';
 
-if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['name']) && isset($_POST['position']) && isset($_POST['testimony']) ) {
+if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['name']) && isset($_POST['position']) && isset($_POST['testimony'])) {
 
     $id = $_POST['constantId'];
     $icon = $_POST['icon'];
@@ -9,12 +9,9 @@ if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['name']
     $position = $_POST['position'];
     $testimony = $_POST['testimony'];
 
-    // echo 'id: ' . $id . '<br>';
-    // echo 'icon: ' . $icon . '<br>';
-    // echo 'title: ' . $title . '<br>';
-    // echo 'text: ' . $text . '<br>';
-    // echo 'link: ' . $link . '<br>';
-
+    $name =   htmlspecialchars($name);
+    $position =   htmlspecialchars($position);
+    $testimony =   htmlspecialchars($testimony);
 
     $sqlUpdateOutput = "UPDATE constants_testimonials SET icon = '$icon', name = '$name', position = '$position', testimony = '$testimony' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);

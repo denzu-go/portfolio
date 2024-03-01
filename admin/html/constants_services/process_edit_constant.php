@@ -9,9 +9,10 @@ if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['title'
     $text = $_POST['text'];
     $link = $_POST['link'];
 
-    $title =   htmlspecialchars($title);
-    $text =   htmlspecialchars($text);
-    $link =   htmlspecialchars($link);
+    $icon =   $conn->real_escape_string($icon);
+    $title =   $conn->real_escape_string($title);
+    $text =   $conn->real_escape_string($text);
+    $link =   $conn->real_escape_string($link);
 
     $sqlUpdateOutput = "UPDATE constants_services SET icon = '$icon', title = '$title', text = '$text', link = '$link' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);

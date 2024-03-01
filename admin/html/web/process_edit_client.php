@@ -3,7 +3,10 @@ include '../../../database/connection.php';
 
 if (isset($_POST['clientId']) && isset($_POST['clientName']) && isset($_POST['clientVisibility']) && isset($_POST['date_added_client'])) {
     $clientId = $_POST['clientId'];
+    
     $clientName = $_POST['clientName'];
+    $clientName =   $conn->real_escape_string($clientName);
+
     $clientVisibility = $_POST['clientVisibility'];
     $date_added_client = $_POST['date_added_client'];
 

@@ -3,7 +3,10 @@ include '../../../database/connection.php';
 
 if (isset($_POST['outputId']) && isset($_POST['link']) && isset($_POST['outputVisibility']) && isset($_POST['date_added_output']) && isset($_POST['clientSelect'])) {
     $outputId = $_POST['outputId'];
+    
     $link = $_POST['link'];
+    $link =   $conn->real_escape_string($link);
+
     $outputVisibility = $_POST['outputVisibility'];
     $date_added_output = $_POST['date_added_output'];
 

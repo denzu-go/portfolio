@@ -5,7 +5,7 @@ if (isset($_POST['id']) && isset($_POST['text'])) {
     $id = $_POST['id'];
     $text = $_POST['text'];
 
-    $text =   htmlspecialchars($text);
+    $text =   $conn->real_escape_string($text);
 
     $sqlUpdateOutput = "UPDATE constants_home SET text = '$text' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);

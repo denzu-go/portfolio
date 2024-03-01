@@ -5,9 +5,16 @@ include '../../../database/connection.php'; // Include your database connection 
 if (isset($_POST['iconInput']) && isset($_POST['titleInput']) && isset($_POST['textInput'])  && isset($_POST['linkInput']) ) {
     // Collect form data
     $iconInput = $_POST['iconInput'];
+    $iconInput =   $conn->real_escape_string($iconInput);
+
     $titleInput = $_POST['titleInput'];
+    $titleInput =   $conn->real_escape_string($titleInput);
+
     $textInput = $_POST['textInput'];
+    $textInput =   $conn->real_escape_string($textInput);
+
     $linkInput = $_POST['linkInput'];
+    $linkInput =   $conn->real_escape_string($linkInput);
 
     // Insert the new client into the database
     $sqlInsertOutput = "INSERT INTO constants_services (icon, title, text, link) VALUES ('$iconInput', '$titleInput', '$textInput', '$linkInput')";

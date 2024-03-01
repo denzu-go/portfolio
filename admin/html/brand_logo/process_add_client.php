@@ -5,6 +5,8 @@ include '../../../database/connection.php'; // Include your database connection 
 if (isset($_POST['clientName']) && isset($_POST['clientVisibility'])) {
     // Collect form data
     $clientName = $_POST['clientName'];
+    $clientName =   $conn->real_escape_string($clientName);
+    
     $clientVisibility = $_POST['clientVisibility'];
 
     // Insert the new client into the database

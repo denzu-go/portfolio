@@ -9,7 +9,9 @@ $result = $conn->query($sql);
 while ($fetched = $result->fetch_assoc()) {
     $id = $fetched['id'];
     $title = $fetched['title'];
+
     $text = $fetched['text'];
+    $text =   htmlspecialchars($text);
 
     $show_title = '
     <span class="small ellipsis" data-toggle="tooltip" title="' . $title . '">' . $title . '</span>

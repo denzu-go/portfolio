@@ -8,10 +8,18 @@ $result = $conn->query($sql);
 
 while ($fetched = $result->fetch_assoc()) {
     $id = $fetched['id'];
+
     $icon = $fetched['icon'];
+    $icon =   htmlspecialchars($icon);
+
     $name = $fetched['name'];
+    $name =   htmlspecialchars($name);
+
     $position = $fetched['position'];
+    $position =   htmlspecialchars($position);
+
     $testimony = $fetched['testimony'];
+    $testimony =   htmlspecialchars($testimony);
 
     $show_icon = '
     <span class="small ellipsis" data-toggle="tooltip" title="' . $icon . '">' . $icon . '</span>

@@ -8,14 +8,23 @@ $result = $conn->query($sql);
 
 while ($fetched = $result->fetch_assoc()) {
     $id = $fetched['id'];
+
     $icon = $fetched['icon'];
+    $icon =   htmlspecialchars($icon);
+
     $instruction = $fetched['instruction'];
+
     $title = $fetched['title'];
+    $title =   htmlspecialchars($title);
+
     $text = $fetched['text'];
+    $text =   htmlspecialchars($text);
+
     $link = $fetched['link'];
+    $link =   htmlspecialchars($link);
 
     $show_icon = '
-    <span class="small ellipsis" data-toggle="tooltip" title="' . htmlspecialchars($icon) . '">' . $icon . '</span>
+    <span class="small ellipsis" data-toggle="tooltip" title="' . $icon . '">' . $icon . '</span>
     ';
 
     $show_title = '
@@ -27,7 +36,7 @@ while ($fetched = $result->fetch_assoc()) {
     ';
 
     $show_actions = '
-        <i id="edit_constant" class="fas fa-pen btn text-secondary p-2 m-0" data-id="' . $id . '" data-icon="' . htmlspecialchars($icon) . '" data-instruction="' . $instruction . '" data-title="' . $title . '" data-text="' . $text . '" data-link="' . $link . '">
+        <i id="edit_constant" class="fas fa-pen btn text-secondary p-2 m-0" data-id="' . $id . '" data-icon="' . $icon . '" data-instruction="' . $instruction . '" data-title="' . $title . '" data-text="' . $text . '" data-link="' . $link . '">
     </i>
     
     <i id="delete_constant" data-id="' . $id . '" class="fas fa-trash btn text-danger p-2 m-0"></i>

@@ -5,7 +5,8 @@ AOS.init({
 });
 
 jQuery(document).ready(function ($) {
-  "use strict";
+
+  ("use strict");
 
   $(".loader").delay(1000).fadeOut("slow");
   $("#overlayer").delay(1000).fadeOut("slow");

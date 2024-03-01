@@ -5,6 +5,8 @@ include '../../../database/connection.php'; // Include your database connection 
 if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset($_POST['editClientSelect']) ) {
     // Collect form data
     $linkInput = $_POST['linkInput'];
+    $linkInput =   $conn->real_escape_string($linkInput);
+
     $newOutputVisibility = $_POST['newOutputVisibility'];
     
     $editClientSelect = $_POST['editClientSelect'];

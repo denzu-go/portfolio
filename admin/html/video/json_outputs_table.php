@@ -9,7 +9,11 @@ $number = 1;
 
 while ($fetched = $result->fetch_assoc()) {
     $output_id = $fetched['id'];
+
     $link = $fetched['link'];
+    // $link = $conn->real_escape_string($link);
+    $link =   htmlspecialchars($link);
+
     $is_portrait = $fetched['is_portrait'];
     $is_visible = $fetched['is_visible'];
     $date_added = $fetched['date_added'];

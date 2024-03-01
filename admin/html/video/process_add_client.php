@@ -7,6 +7,8 @@ if (isset($_POST['clientName']) && isset($_POST['clientVisibility'])) {
     $clientName = $_POST['clientName'];
     $clientVisibility = $_POST['clientVisibility'];
 
+    $clientName =   $conn->real_escape_string($clientName);
+
     // Insert the new client into the database
     $sqlInsertClient = "INSERT INTO video_clients (client_name, is_visible, date_added) VALUES ('$clientName', $clientVisibility, NOW())";
     if ($conn->query($sqlInsertClient) === TRUE) {

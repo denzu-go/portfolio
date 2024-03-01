@@ -10,6 +10,65 @@ include 'global/head.php';
 ?>
 
 <style>
+  #loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+  /* .loader {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+  }
+
+  .loader>div {
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: #2a88e6;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
+
+
+
   .circle {
     width: 57px;
     height: 57px;
@@ -62,15 +121,30 @@ include 'global/head.php';
     }
   }
 
+  #videoFrameLands iframe {
+    width: 100%;
+    height: 40%;
+  }
+
   @media (max-width: 576px) {
-    #videoFrameLands {
+    #videoFrameLands iframe {
       width: 100%;
       height: 200px;
     }
   }
+
+  #videoFrameLands iframe {
+    width: 100%;
+  }
 </style>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <!-- <div class="loader">
+    <div></div>
+  </div> -->
+
+  <div id="loading-spinner"></div>
+
 
 
   <?php
@@ -273,8 +347,9 @@ include 'global/head.php';
 
           if ($is_portrait) {
             $show = '
-            <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" style="display: flex; justify-content: center; align-items: center;">
               <iframe id="videoFrame"
+                loading="lazy"
                 width="70%" height="300px"
                 src="https://www.youtube.com/embed/' . $link . '" 
                 title="YouTube video player" frameborder="0" 
@@ -287,8 +362,8 @@ include 'global/head.php';
             ';
           } else {
             $show = '
-            <div class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-              <iframe id="videoFrameLands" width="100%" src="' . $link . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div id="videoFrameLands" class="item ' . $client_id . ' col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+            ' . $link . '
             </div>
             ';
           }
@@ -298,6 +373,7 @@ include 'global/head.php';
             ';
         }
         ?>
+
 
 
       </div>
@@ -706,6 +782,37 @@ include 'global/head.php';
   <?php
   include 'global/scripts.php';
   ?>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const spinner = document.getElementById('loading-spinner');
+      const content = document.getElementById('content');
+
+      // Show spinner
+      spinner.style.display = 'block';
+
+      // Hide spinner when document is fully loaded
+      window.addEventListener('load', function() {
+        spinner.style.display = 'none';
+        content.style.display = 'block'; // Show content after spinner hides
+      });
+    });
+
+
+    // Get all img and iframe elements
+    const images = document.querySelectorAll('img');
+    const iframes = document.querySelectorAll('iframe');
+
+    // Add loading="lazy" attribute to all img elements
+    images.forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
+
+    // Add loading="lazy" attribute to all iframe elements
+    iframes.forEach(iframe => {
+      iframe.setAttribute('loading', 'lazy');
+    });
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

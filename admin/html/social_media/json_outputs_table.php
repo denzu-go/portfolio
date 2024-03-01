@@ -9,7 +9,10 @@ $number = 1;
 
 while ($fetched = $result->fetch_assoc()) {
     $output_id = $fetched['id'];
+
     $link = $fetched['link'];
+    $link =   htmlspecialchars($link);
+    
     $is_visible = $fetched['is_visible'];
     $date_added = $fetched['date_added'];
     $client_id = $fetched['client_id'];

@@ -3,7 +3,10 @@ include '../../../database/connection.php';
 
 if (isset($_POST['outputId']) && isset($_POST['link']) && isset($_POST['outputVisibility']) && isset($_POST['date_added_output']) && isset($_POST['clientSelect'])) {
     $outputId = $_POST['outputId'];
+    
     $link = $_POST['link'];
+    $link =   $conn->real_escape_string($link);
+    
     $outputVisibility = $_POST['outputVisibility'];
     $date_added_output = $_POST['date_added_output'];
 
@@ -14,13 +17,6 @@ if (isset($_POST['outputId']) && isset($_POST['link']) && isset($_POST['outputVi
         $clientSelect = $_POST['clientSelect'];
     }
 
-
-
-    echo 'outputId: ' . $outputId . '<br>';
-    echo 'link: ' . $link . '<br>';
-    echo 'outputVisibility: ' . $outputVisibility . '<br>';
-    echo 'date_added_output: ' . $date_added_output . '<br>';
-    echo 'clientSelect: ' . $clientSelect . '<br>';
 
     $sqlUpdateOutput = "UPDATE graphic_outputs SET link = '$link', is_visible = $outputVisibility, client_id = $clientSelect, date_added = '$date_added_output' WHERE id = $outputId";
     $result = $conn->query($sqlUpdateOutput);

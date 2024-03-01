@@ -8,6 +8,8 @@ if (isset($_POST['linkInput']) && isset($_POST['newOutputVisibility']) && isset(
     $newOutputVisibility = $_POST['newOutputVisibility'];
     $newPortrait = $_POST['newPortrait'];
 
+    $linkInput =   $conn->real_escape_string($linkInput);
+
     $editClientSelect = $_POST['editClientSelect'];
 
     if ($editClientSelect == '') {

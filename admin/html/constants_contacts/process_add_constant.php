@@ -5,8 +5,13 @@ include '../../../database/connection.php'; // Include your database connection 
 if (isset($_POST['iconInput']) && isset($_POST['textInput']) && isset($_POST['linkInput']) ) {
 
     $iconInput = $_POST['iconInput'];
+    $iconInput =   $conn->real_escape_string($iconInput);
+
     $textInput = $_POST['textInput'];
+    $textInput =   $conn->real_escape_string($textInput);
+
     $linkInput = $_POST['linkInput'];
+    $linkInput =   $conn->real_escape_string($linkInput);
 
     // Insert the new client into the database
     $sqlInsertOutput = "INSERT INTO constants_contacts (icon, text, link) VALUES ('$iconInput', '$textInput', '$linkInput')";

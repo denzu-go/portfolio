@@ -9,9 +9,10 @@ if (isset($_POST['constantId']) && isset($_POST['icon']) && isset($_POST['name']
     $position = $_POST['position'];
     $testimony = $_POST['testimony'];
 
-    $name =   htmlspecialchars($name);
-    $position =   htmlspecialchars($position);
-    $testimony =   htmlspecialchars($testimony);
+    $icon =   $conn->real_escape_string($icon);
+    $name =   $conn->real_escape_string($name);
+    $position =   $conn->real_escape_string($position);
+    $testimony =   $conn->real_escape_string($testimony);
 
     $sqlUpdateOutput = "UPDATE constants_testimonials SET icon = '$icon', name = '$name', position = '$position', testimony = '$testimony' WHERE id = $id";
     $result = $conn->query($sqlUpdateOutput);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2024 at 01:58 PM
+-- Generation Time: Mar 03, 2024 at 02:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -82,9 +82,9 @@ CREATE TABLE `constants_about` (
 --
 
 INSERT INTO `constants_about` (`id`, `title`, `instruction`, `text`) VALUES
-(1, 'heading', '', 'dasdasdasd'),
-(2, 'text', '', 'ako si'),
-(3, 'picture', 'paste image address link', 'https://img.hotimg.com/WIN_20240217_22_36_15_Pro.jpeg');
+(1, 'heading', '', 'Your One-Stop Creative Solution'),
+(2, 'text', '', 'Hey there <i class=\"fa-regular fa-face-smile-wink\"></i>, I\'m Denzel Go, a passionate creative professional specializing in 𝐯𝐢𝐝𝐞𝐨 𝐞𝐝𝐢𝐭𝐢𝐧𝐠, 𝐠𝐫𝐚𝐩𝐡𝐢𝐜 𝐝𝐞𝐬𝐢𝐠𝐧, and 𝐰𝐞𝐛 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭/𝐝𝐞𝐬𝐢𝐠𝐧.. \n<br>\nSince 2018, I\'ve been weaving my expertise across these dynamic fields, constantly exploring new avenues of creativity. Beyond the digital realm, I find my rhythm in playing 𝐦𝐮𝐬𝐢𝐜𝐚𝐥 𝐢𝐧𝐬𝐭𝐫𝐮𝐦𝐞𝐧𝐭𝐬, where melodies become my sanctuary and inspiration. \n<br>\nLet\'s collaborate and bring our combined talents to life in your next project! <i class=\"fa-regular fa-handshake\"></i>'),
+(3, 'picture', 'paste image address link', 'https://img.hotimg.com/plv-denz.png');
 
 -- --------------------------------------------------------
 
@@ -105,8 +105,8 @@ CREATE TABLE `constants_contacts` (
 --
 
 INSERT INTO `constants_contacts` (`id`, `icon`, `text`, `link`, `date_added`) VALUES
-(1, '<i class=\"fa-solid fa-plane\"></i>', 'basdbhasd', 'basdbhasd', '2024-02-26 12:56:31'),
-(3, '<i class=\"fa-solid fa-plane\"></i>', 'sa', 'das', '2024-02-26 13:00:56');
+(4, '<i class=\"fa-solid fa-plane-lock\"></i>', '@denzel.go.31', 'facebook.com', '2024-03-03 09:13:26'),
+(5, '<i class=\"fa-solid fa-plane-lock\"></i>', 'instagrame', '', '2024-03-03 09:13:32');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE `constants_footer` (
 --
 
 INSERT INTO `constants_footer` (`id`, `title`, `text`) VALUES
-(1, 'footer text', 'Thank you <3');
+(1, 'footer text', 'To God be all the Glory');
 
 -- --------------------------------------------------------
 
@@ -146,10 +146,10 @@ CREATE TABLE `constants_home` (
 
 INSERT INTO `constants_home` (`id`, `title`, `instruction`, `text`) VALUES
 (1, 'name logo', '', 'Denzu'),
-(2, 'welcome', '', 'Hello!'),
-(3, 'texts below welcome', '', 'Ako si Nicole'),
-(4, 'button text', '', 'contact m1e'),
-(5, 'background image', 'https://www.facebook.com/', 'https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/411815549_2730494337102743_3580538383150399030_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeEmQJnHv4u00d49ydu4EN5oW2XX4Dj-oh9bZdfgOP6iHxRSGUfw2LnIWoiOm0kr3kVrx-Z-RcQgjRej6ApXWnim&_nc_ohc=UXvWT0iem0oAX9mxYj6&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfDNXa_gG40IRSXAnPmyDGhJ4WSubRj8Fx7TcKLB5E33-Q&oe=65E28F90');
+(2, 'welcome', '', 'Welcome </i> <i class=\"fa-regular fa-face-laugh-beam\"></i><i class=\"fa-regular fa-hand-peace\"></i>'),
+(3, 'texts below welcome', '', 'This is a Hub of Innovation and Digital Excellence <i class=\"fa-solid fa-fire\"></i>'),
+(4, 'button text', '', 'Get in touch'),
+(5, 'background image', 'https://www.facebook.com/', 'https://img.hotimg.com/Untitled-design-19833cfa6951c0e8d.png');
 
 -- --------------------------------------------------------
 
@@ -172,9 +172,8 @@ CREATE TABLE `constants_services` (
 --
 
 INSERT INTO `constants_services` (`id`, `icon`, `instruction`, `title`, `text`, `link`, `date_added`) VALUES
-(4, '<i class=\"fa-solid fa-film\"></i>', NULL, 'Video Editing', 'blah bla ha asdashdjasdjasdhj', 'https://www.facebook.com/', '2024-02-26 11:58:53'),
-(5, '<i class=\"fa-solid fa-wand-magic-sparkles\"></i>', NULL, 'Graphic Designing', 'yowyowyowyow', '', '2024-02-26 11:59:44'),
-(6, '<i class=\"fa-solid fa-xmark\"></i>', NULL, 'asd', 'asd', 'asd', '2024-02-26 12:17:51');
+(4, '<i class=\"fa-solid fa-plane\"></i>', NULL, 'Video', 'blah blach', 'facebook.com', '2024-02-26 11:58:53'),
+(7, '<i class=\"fa-solid fa-plane-departure\"></i>', NULL, 'title', 'text ', '', '2024-03-03 09:11:03');
 
 -- --------------------------------------------------------
 
@@ -196,8 +195,7 @@ CREATE TABLE `constants_testimonials` (
 --
 
 INSERT INTO `constants_testimonials` (`id`, `icon`, `name`, `position`, `testimony`, `date_added`) VALUES
-(1, 'https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/428617500_122122533974177150_111028998910544720_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c42490&_nc_eui2=AeH3WeA7mYLfsUcyt5eAiY3mR8-zUV3y4YdHz7NRXfLhh-PpVhvVmM_cvL_MoigXNxjHhLQXbugd9Wyv-1hhcLFa&_nc_ohc=Abw8ed6yzHUAX_-csCJ&_nc_ht=scontent.fmnl33-2.fna&oh=00_AfBxqM5O58BOxY7RH3ecBEhtjb-BbJDxvPWdQBeqzDaC3A&oe=65E179AF', 'babbaab', 'babbaab', 'testiasdasdbabbababaa', '2024-02-26 12:22:53'),
-(2, 'kl', 'ASDASDASD', 'klkl', 'kkklk', '2024-02-26 12:22:53');
+(3, 'https://i.ibb.co/N7Y77RY/denzel-cover-photo-upwork-2.png', 'Denzel', 'CEO', 'lupet', '2024-03-03 09:12:40');
 
 -- --------------------------------------------------------
 
@@ -259,7 +257,7 @@ CREATE TABLE `social_media_clients` (
 --
 
 INSERT INTO `social_media_clients` (`client_id`, `client_name`, `is_visible`, `date_added`) VALUES
-(1, 'levona', 1, '2024-02-25 16:00:00'),
+(1, '&#039;levona', 1, '2024-02-25 16:00:00'),
 (2, 'BMI', 1, '2024-02-25 16:00:00');
 
 -- --------------------------------------------------------
@@ -281,7 +279,7 @@ CREATE TABLE `social_media_outputs` (
 --
 
 INSERT INTO `social_media_outputs` (`id`, `link`, `is_visible`, `date_added`, `client_id`) VALUES
-(6, 'asd', 1, '2024-02-27 09:35:59', 2);
+(6, '\"asd', 1, '2024-02-26 16:00:00', 2);
 
 -- --------------------------------------------------------
 
@@ -322,8 +320,10 @@ CREATE TABLE `video_clients` (
 --
 
 INSERT INTO `video_clients` (`client_id`, `client_name`, `is_visible`, `date_added`) VALUES
-(86, 'reels', 1, '2024-02-27 06:08:50'),
-(87, 'long form', 1, '2024-02-27 06:08:53');
+(86, 'long form', 1, '2024-03-25 16:00:00'),
+(89, 'promotional', 1, '2024-03-24 16:00:00'),
+(90, 'reels', 1, '2024-03-26 16:00:00'),
+(91, 'slideshow', 1, '2024-03-03 13:02:53');
 
 -- --------------------------------------------------------
 
@@ -345,8 +345,25 @@ CREATE TABLE `video_outputs` (
 --
 
 INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `is_portrait`, `date_added`, `client_id`) VALUES
-(46, 'MBaVan03m-k', 1, 1, '2024-02-04 16:00:00', 86),
-(47, 'https://www.youtube.com/embed/IGWtNqeZMp0?si=rzm-eDrKNoYVOyWi', 1, 0, '2024-02-26 16:00:00', 87);
+(83, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/mU-ipmYue9o?si=uh3D2nqUHGNHZF4K\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-02-29 16:00:00', 86),
+(87, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/aW35-_8Ge5I?si=cEgY_DDTf0CKW1US\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-01 14:46:04', 86),
+(88, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ddUT8WusSOY?si=y2rKbMLNgn8Xz8Fn\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-01 14:46:14', 86),
+(91, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/8VCo0zqXF1Y?si=2cSOp_1YBfbSTSDY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 0, 0, '2024-02-29 16:00:00', 86),
+(92, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KaHgznO8n2U?si=mz3C1Ucr_kzjepOU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-24 16:00:00', 86),
+(93, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5ZEOpRxBSBE?si=b82Ys7pS1el-kXoc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-24 16:00:00', 86),
+(94, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iO83qlbir9Q?si=l7P5qeCOnDxrQfuR\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-24 16:00:00', 86),
+(95, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YnFQLxXXb1A?si=uvUsGo6Fk12Vg60Z\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-01 14:51:08', 89),
+(96, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BGcXtNLAWwA?si=jiiP6TAKrdjMz5Yg\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-29 16:00:00', 89),
+(97, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YPNp-Il1VJc?si=XRFxEheXKYvdLniW\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-27 16:00:00', 89),
+(98, 'nrYzRYkRMGk', 1, 1, '2024-03-26 16:00:00', 90),
+(101, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YWZ7xdqyVKo?si=13MyM5tSurdTPI4F\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-02-29 16:00:00', 86),
+(102, 'YDlBQYXoUGM', 1, 1, '2024-03-03 12:54:57', 90),
+(103, '0OtazOR_mug', 0, 1, '2024-03-02 16:00:00', 90),
+(104, 'W_aYiiLz7SI', 1, 1, '2024-03-26 16:00:00', 90),
+(105, 'ZAQA2M4mFkI', 1, 1, '2024-03-27 16:00:00', 90),
+(106, 'IoqFHOEnUJ0', 1, 1, '2024-03-03 12:57:01', 90),
+(107, 'dzL5BqYAvlM', 1, 1, '2024-03-03 12:57:10', 90),
+(108, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/00V_iDjPZi0?si=5szJdKqEAEEuZqOk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-03 13:02:59', 91);
 
 -- --------------------------------------------------------
 
@@ -523,7 +540,7 @@ ALTER TABLE `constants_about`
 -- AUTO_INCREMENT for table `constants_contacts`
 --
 ALTER TABLE `constants_contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `constants_footer`
@@ -541,13 +558,13 @@ ALTER TABLE `constants_home`
 -- AUTO_INCREMENT for table `constants_services`
 --
 ALTER TABLE `constants_services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `constants_testimonials`
 --
 ALTER TABLE `constants_testimonials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `graphic_clients`
@@ -577,13 +594,13 @@ ALTER TABLE `social_media_outputs`
 -- AUTO_INCREMENT for table `video_clients`
 --
 ALTER TABLE `video_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `video_outputs`
 --
 ALTER TABLE `video_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `web_clients`

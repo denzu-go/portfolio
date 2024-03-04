@@ -411,12 +411,12 @@ include 'global/head.php';
         var text = $(this).data('text');
         var link = $(this).data('link');
 
-        $('#editModal').modal('show');
         $('#constantId').val(id);
         $('#iconEdit').val(icon);
         $('#titleEdit').val(title);
         $('#textEdit').val(text);
         $('#linkEdit').val(link);
+        $('#editModal').modal('show');
 
       });
 

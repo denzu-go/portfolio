@@ -181,9 +181,13 @@ include 'global/head.php';
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
               <textarea type="text" class="form-control" id="text" required></textarea>
-              <em>
-                <p class="small text-muted font-italic" id="modal-subtitle"></p>
-              </em>
+              <div id="instruction">
+                <em>
+                  <p class="small text-muted font-italic" id="modal-subtitle">
+                    <a href="" target="_blank">click this to learn how</a>
+                  </p>
+                </em>
+              </div>
             </div>
 
 
@@ -256,9 +260,16 @@ include 'global/head.php';
 
         $('#title').val(title);
         $('#editModal').find('#modal-title').text('Edit ' + title);
-        $('#editModal').find('#modal-subtitle').text(instruction);
 
         $('#text').val(text);
+
+        if (instruction && instruction !== '') {
+          var instructionLink = instruction;
+          $('#instruction a').attr('href', instructionLink);
+          $('#instruction').show(); // Show the instruction div
+        } else {
+          $('#instruction').hide(); // Hide the instruction div
+        }
 
         $('#editModal').modal('show');
       });

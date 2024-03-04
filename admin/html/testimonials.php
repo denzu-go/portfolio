@@ -136,7 +136,7 @@ include 'global/head.php';
                   <thead class="text-dark fs-4">
                     <tr>
                       <th class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0 small">Icon</h6>
+                        <h6 class="fw-semibold mb-0 small">Image</h6>
                       </th>
                       <th class="border-bottom-0">
                         <h6 class="fw-semibold mb-0">Name</h6>
@@ -198,7 +198,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how</a></p>
                 </em>
                 ';
               }
@@ -255,7 +255,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how</a></p>
                 </em>
                 ';
               }

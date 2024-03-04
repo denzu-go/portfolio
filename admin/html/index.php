@@ -184,7 +184,7 @@ include 'global/head.php';
               <div id="instruction">
                 <em>
                   <p class="small text-muted font-italic" id="modal-subtitle">
-                    <a href="" target="_blank">click this to watch tutorial</a>
+                    <a href="" target="_blank">click this to learn how</a>
                   </p>
                 </em>
               </div>

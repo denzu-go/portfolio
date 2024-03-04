@@ -10,12 +10,19 @@ include 'global/head.php';
 ?>
 
 <style>
+  #parent-loading {
+    display: grid;
+    position: fixed;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+
   #loading-spinner {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     border: 4px solid #f3f3f3;
     border-radius: 50%;
     border-top: 4px solid #3498db;
@@ -34,40 +41,6 @@ include 'global/head.php';
       transform: rotate(360deg);
     }
   }
-
-
-
-
-  /* .loader {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background-color: #16191e;
-    position: absolute;
-  }
-
-  .loader>div {
-    height: 100px;
-    width: 100px;
-    border: 15px solid #45474b;
-    border-top-color: #2a88e6;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 50%;
-    animation: spin 1.5s infinite linear;
-  }
-
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-  } */
-
-
 
   .circle {
     width: 57px;
@@ -143,7 +116,9 @@ include 'global/head.php';
     <div></div>
   </div> -->
 
-  <div id="loading-spinner"></div>
+  <div id="parent-loading">
+    <div id="loading-spinner"></div>
+  </div>
 
 
 

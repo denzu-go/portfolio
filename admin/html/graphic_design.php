@@ -315,7 +315,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how</a></p>
                 </em>
                 ';
               }
@@ -359,7 +359,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how</a></p>
                 </em>
                 ';
               }

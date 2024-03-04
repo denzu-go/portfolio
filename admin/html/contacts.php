@@ -195,7 +195,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial on how to get icons from fontawesome</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how to get icons from fontawesome</a></p>
                 </em>
                 ';
               }
@@ -248,7 +248,7 @@ include 'global/head.php';
 
                 echo '
                 <em>
-                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to watch tutorial on how to get icons from fontawesome</a></p>
+                  <p class="small text-muted font-italic" id="modal-subtitle"><a href="' . $link . '" target="_blank">click this to learn how to get icons from fontawesome</a></p>
                 </em>
                 ';
               }

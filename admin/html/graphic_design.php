@@ -293,7 +293,6 @@ include 'global/head.php';
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!-- Add client form -->
           <form id="addOutputForm" onsubmit="return false;">
 
             <div class="mb-3">
@@ -306,7 +305,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkInput" class="form-label">Link:</label>
-              <input type="text" class="form-control" id="linkInput" required>
+              <textarea type="text" class="form-control" id="linkInput" required></textarea>
               <?php
               $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
               $result = $conn->query($sql);
@@ -350,7 +349,7 @@ include 'global/head.php';
             <input type="hidden" id="outputClientId">
             <div class="mb-3">
               <label for="link" class="form-label">Link:</label>
-              <input type="text" class="form-control" id="link" required>
+              <textarea type="text" class="form-control" id="link" required></textarea>
               <?php
               $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
               $result = $conn->query($sql);

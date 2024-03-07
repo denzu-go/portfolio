@@ -32,26 +32,26 @@
 
 
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/jquery-ui.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/owl.carousel.min.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css?<?php echo time(); ?>">
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css?<?php echo time(); ?>">
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css?<?php echo time(); ?>">
 
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css?<?php echo time(); ?>">
 
-  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/aos.css?<?php echo time(); ?>">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
 
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="lite-yt-embed.css">
-  <script src="lite-yt-embed.js"></script>
+  <link rel="stylesheet" href="lite-yt-embed.css?<?php echo time(); ?>">
+  <script src="lite-yt-embed.js?<?php echo time(); ?>"></script>
 
 </head>

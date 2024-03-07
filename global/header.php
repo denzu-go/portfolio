@@ -42,7 +42,7 @@
                         <li><a href="#services-section" class="nav-link">Services</a></li>
                         <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
 
-                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                        <li><a href="#contact-section" class="nav-link">Contacts</a></li>
                     </ul>
                 </nav>
             </div>

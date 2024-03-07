@@ -62,8 +62,15 @@ include 'global/head.php';
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   }
+
+  #button-bottom {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c7c7c7;
+    color: #f7f7f7;
+  }
+
 
   @media (max-width: 767px) {
     .ellipsis-min {
@@ -120,8 +127,6 @@ include 'global/head.php';
     <div id="loading-spinner"></div>
   </div>
 
-
-
   <?php
   include 'global/overlayer.php';
   ?>
@@ -150,7 +155,7 @@ include 'global/head.php';
       $show = $fetched['text'];
 
       echo '
-      <div class="site-blocks-cover overlay" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ), url(' . $show . ');" data-aos="fade" id="home-section">
+      <div class="site-blocks-cover overlay" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ), url(' . $show . ');" data-aos="" id="home-section">
       ';
     }
     ?>
@@ -160,7 +165,7 @@ include 'global/head.php';
 
 
         <div class="col-md-8 mt-lg-5 text-center">
-          <h1 class="text-uppercase" data-aos="fade-up">
+          <h1 class="text-uppercase" data-aos="">
             <?php
             $sql = "SELECT * FROM constants_home WHERE title = 'welcome'";
             $result = $conn->query($sql);
@@ -172,7 +177,7 @@ include 'global/head.php';
             ?>
           </h1>
 
-          <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+          <p class="mb-5 desc" data-aos="" data-aos-delay="100">
             <?php
             $sql = "SELECT * FROM constants_home WHERE title = 'texts below welcome'";
             $result = $conn->query($sql);
@@ -183,7 +188,7 @@ include 'global/head.php';
             echo $show;
             ?>
           </p>
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div data-aos="" data-aos-delay="100">
             <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">
               <?php
               $sql = "SELECT * FROM constants_home WHERE title = 'button text'";
@@ -211,12 +216,12 @@ include 'global/head.php';
   <div class="site-section cta-big-image bg-light" id="about-section">
     <div class="container">
       <div class="row mb-5">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="section-title mb-3">About Me</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+        <div class="col-lg-6 mb-5" data-aos="" data-aos-delay="">
           <?php
           $sql = "SELECT * FROM constants_about WHERE title = 'picture'";
           $result = $conn->query($sql);
@@ -230,7 +235,7 @@ include 'global/head.php';
           ?>
         </div>
 
-        <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-5 ml-auto" data-aos="" data-aos-delay="100">
           <div class="mb-4">
             <h3 class="h3 mb-4 text-black">
               <?php
@@ -264,9 +269,8 @@ include 'global/head.php';
     </div>
   </div>
 
-  <section class="site-section" id="portfolio-section">
-    <br><br>
-    <div class="col-12 text-center" data-aos="fade">
+  <section class="site-section" id="portfolio-section" style="margin-bottom: -100px;">
+    <div class="col-12 text-center" data-aos="">
       <h2 class="section-title mb-3">My Portfolio</h2>
     </div>
     <div class="row justify-content-center p-0 m-0" data-aos="fade-up">
@@ -278,17 +282,18 @@ include 'global/head.php';
     </div>
   </section>
 
-  <section class="site-section" id="portfolio1-section">
-    <hr class="hr" /><br>
+
+  <section class="site-section" id="portfolio1-section" style="margin-bottom: -100px;">
+    <br><br>
     <div class="container">
 
       <div class="row">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="mb-3">Video Edit</h2>
         </div>
       </div>
 
-      <div class="row justify-content-center mb-1" data-aos="fade-up">
+      <div class="row justify-content-center mb-1" data-aos="">
         <div id="filters1" class="filters text-center button-group col-md-7">
           <button class="btn btn-primary active" data-filter="*">All</button>
 
@@ -356,17 +361,17 @@ include 'global/head.php';
 
   </section>
 
-  <section class="site-section" id="portfolio2-section">
-    <hr class="hr" /><br>
+  <section class="site-section" id="portfolio2-section" style="margin-bottom: -100px;">
+    <br><br>
     <div class="container">
 
       <div class="row">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="mb-3">Graphic Design</h2>
         </div>
       </div>
 
-      <div class="row justify-content-center mb-1" data-aos="fade-up">
+      <div class="row justify-content-center mb-1" data-aos="">
         <div id="filters2" class="filters text-center button-group col-md-7">
           <button class="btn btn-primary active" data-filter="*">All</button>
           <?php
@@ -411,16 +416,16 @@ include 'global/head.php';
 
   </section>
 
-  <section class="site-section" id="portfolio3-section">
-    <hr class="hr" /><br>
+  <section class="site-section" id="portfolio3-section" style="margin-bottom: -100px;">
+    <br><br>
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="mb-3">Social Media</h2>
         </div>
       </div>
 
-      <div class="row justify-content-center mb-1" data-aos="fade-up">
+      <div class="row justify-content-center mb-1" data-aos="">
         <div id="filters3" class="filters text-center button-group col-md-7">
           <button class="btn btn-primary active" data-filter="*">All</button>
           <?php
@@ -463,17 +468,17 @@ include 'global/head.php';
 
   </section>
 
-  <section class="site-section" id="portfolio4-section">
-    <hr class="hr" /><br>
+  <section class="site-section" id="portfolio4-section" style="margin-bottom: -100px;">
+    <br><br>
     <div class="container">
 
       <div class="row">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="mb-3">Brand & Logo</h2>
         </div>
       </div>
 
-      <div class="row justify-content-center mb-1" data-aos="fade-up">
+      <div class="row justify-content-center mb-1" data-aos="">
         <div id="filters4" class="filters text-center button-group col-md-7">
           <button class="btn btn-primary active" data-filter="*">All</button>
           <?php
@@ -517,17 +522,17 @@ include 'global/head.php';
     </div>
   </section>
 
-  <section class="site-section" id="portfolio5-section">
-    <hr class="hr" /><br>
+  <section class="site-section" id="portfolio5-section" style="margin-bottom: -100px;">
+    <br><br>
     <div class="container">
 
       <div class="row">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="mb-3">Web Design & UI/UX</h2>
         </div>
       </div>
 
-      <div class="row justify-content-center mb-1" data-aos="fade-up">
+      <div class="row justify-content-center mb-1" data-aos="">
         <div id="filters5" class="filters text-center button-group col-md-7">
           <button class="btn btn-primary active" data-filter="*">All</button>
           <?php
@@ -569,12 +574,13 @@ include 'global/head.php';
 
       </div>
     </div>
+    <br><br>
   </section>
 
   <section class="site-section border-bottom bg-light" id="services-section">
     <div class="container">
       <div class="row mb-5">
-        <div class="col-12 text-center" data-aos="fade">
+        <div class="col-12 text-center" data-aos="">
           <h2 class="section-title mb-3">My Services</h2>
         </div>
       </div>
@@ -593,13 +599,12 @@ include 'global/head.php';
           } else {
             $show_link = '
               <p><a href="' . $link . '" target="_blank">See More</a></p>
-
               ';
           }
 
 
           echo '
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="">
             <div class="unit-4">
               <div class="unit-4-icon">
                 <span class="text-primary">
@@ -607,8 +612,8 @@ include 'global/head.php';
                 </span>
               </div>
               <div>
-                <h3>' . $text . '</h3>
-                <p>' . $title . '</p>
+                <h3>' . $title . '</h3>
+                <p>' . $text . '</p>
                 ' . $show_link . '
               </div>
             </div>
@@ -624,7 +629,7 @@ include 'global/head.php';
     </div>
   </section>
 
-  <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
+  <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="">
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center">
@@ -657,26 +662,28 @@ include 'global/head.php';
           <div>
             <div class="testimonial">
               <blockquote class="mb-5">
-                <p>
+                <p class="small">
                 &ldquo;' . $testimony . '&rdquo;
                 </p>
               </blockquote>
               <figure class="mb-4 d-flex align-items-center justify-content-center">
 
-              <div class="row">
-              <div class="col">
-              <div class="circle">
-                  <img src="' . $icon . '">
-                </div>         
-              </div>
-              <div class="col">
-              <div class="row p-0 m-0">  <span class="">' . $name . '</span></div>
-              <div class="row p-0 m-0"><span class="small font-italic">' . $position . '</span></div>
-              </div>
-              </div>
-                       
-  
-              
+                <div class="row">
+                  <div class="col-auto">
+                    <div class="circle">
+                      <img src="' . $icon . '">
+                    </div>         
+                  </div>
+
+                  <div class="col">
+                    <div class="row p-0 m-0">
+                        <span class="d-block">' . $name . '</span>
+                    </div>
+                    <div class="row p-0 m-0">
+                        <span class="small font-italic d-block">' . $position . '</span>
+                    </div>
+                  </div>
+                </div>
               </figure>
 
             </div>
@@ -688,7 +695,7 @@ include 'global/head.php';
     </div>
   </section>
 
-  <section class="site-section bg-light" id="contact-section" data-aos="fade">
+  <section class="site-section bg-light" id="contact-section" data-aos="">
     <div class="container">
       <div class="row mb-1">
         <div class="col-12 text-center">
@@ -737,12 +744,12 @@ include 'global/head.php';
   </section>
 
   <div id="bottomnav" class="navbar fixed-bottom">
-    <div class="d-flex justify-content-center align-items-center" data-aos="fade-up">
-      <a href="#portfolio1-section" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Video Edit">Video Edit</span></a>
-      <a href="#portfolio2-section" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Graphic Design">Graphic Design</span></a>
-      <a href="#portfolio3-section" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Social Media">Social Media</span></a>
-      <a href="#portfolio4-section" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Brand & Logo">Brand & Logo</span></a>
-      <a href="#portfolio5-section" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Web Design & UI/UX">Web Design & UI/UX</span></a>
+    <div class="d-flex justify-content-center align-items-center" data-aos="">
+      <a href="#portfolio1-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Video Edit">Video Edit</span></a>
+      <a href="#portfolio2-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Graphic Design">Graphic Design</span></a>
+      <a href="#portfolio3-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Social Media">Social Media</span></a>
+      <a href="#portfolio4-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Brand & Logo">Brand & Logo</span></a>
+      <a href="#portfolio5-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Web Design & UI/UX">Web Design & UI/UX</span></a>
     </div>
   </div>
 
@@ -757,63 +764,6 @@ include 'global/head.php';
   <?php
   include 'global/scripts.php';
   ?>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const spinner = document.getElementById('loading-spinner');
-      const content = document.getElementById('content');
-
-      // Show spinner
-      spinner.style.display = 'block';
-
-      // Hide spinner when document is fully loaded
-      window.addEventListener('load', function() {
-        spinner.style.display = 'none';
-        content.style.display = 'block'; // Show content after spinner hides
-      });
-    });
-
-
-    // Get all img and iframe elements
-    const images = document.querySelectorAll('img');
-    const iframes = document.querySelectorAll('iframe');
-
-    // Add loading="lazy" attribute to all img elements
-    images.forEach(img => {
-      img.setAttribute('loading', 'lazy');
-    });
-
-    // Add loading="lazy" attribute to all iframe elements
-    iframes.forEach(iframe => {
-      iframe.setAttribute('loading', 'lazy');
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
-      if (disclaimer) {
-        disclaimer.remove();
-      }
-    });
-  </script>
-
-  <script>
-    document.addEventListener("scroll", function() {
-      var section1 = document.getElementById("portfolio-section");
-      var section3 = document.getElementById("testimonials-section");
-      var bottomnav = document.getElementById("bottomnav");
-
-      var section1Offset = section1.getBoundingClientRect().top;
-      var section3Offset = section3.getBoundingClientRect().top;
-
-      if (section1Offset <= 0 && section3Offset > window.innerHeight) {
-        bottomnav.style.display = "block";
-      } else {
-        bottomnav.style.display = "none";
-      }
-    });
-  </script>
 
 </body>
 

@@ -5,6 +5,54 @@ AOS.init({
 });
 
 jQuery(document).ready(function ($) {
+  // Hide the bottom navigation bar by default
+  document.getElementById("bottomnav").style.display = "none";
+
+  // Event listener for scroll
+  document.addEventListener("scroll", function () {
+    var section1 = document.getElementById("portfolio-section");
+    var section3 = document.getElementById("testimonials-section");
+    var bottomnav = document.getElementById("bottomnav");
+
+    var section1Offset = section1.getBoundingClientRect().top;
+    var section3Offset = section3.getBoundingClientRect().top;
+
+    if (section1Offset <= 0 && section3Offset > window.innerHeight) {
+      bottomnav.style.display = "block";
+    } else {
+      bottomnav.style.display = "none";
+    }
+  });
+  
+
+  // Show spinner
+  const spinner = document.getElementById("loading-spinner");
+  const content = document.getElementById("content");
+  spinner.style.display = "block";
+
+  // Hide spinner when document is fully loaded
+  window.addEventListener("load", function () {
+    spinner.style.display = "none";
+    content.style.display = "block";
+  });
+
+  // Lazy load images and iframes
+  const images = document.querySelectorAll("img");
+  const iframes = document.querySelectorAll("iframe");
+
+  images.forEach((img) => {
+    img.setAttribute("loading", "lazy");
+  });
+
+  iframes.forEach((iframe) => {
+    iframe.setAttribute("loading", "lazy");
+  });
+
+  // Remove disclaimer image
+  var disclaimer = document.querySelector("img[alt='www.000webhost.com']");
+  if (disclaimer) {
+    disclaimer.remove();
+  }
 
   ("use strict");
 

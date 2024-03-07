@@ -181,7 +181,6 @@ include 'global/head.php';
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!-- Add client form -->
           <form id="addForm" onsubmit="return false;">
 
             <div class="mb-3">
@@ -210,7 +209,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkInput" class="form-label">Link:</label>
-              <input type="text" class="form-control" id="linkInput" required>
+              <textarea type="text" class="form-control" id="linkInput"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" id="addContact">Submit</button>
@@ -262,7 +261,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">Link:</label>
-              <textarea type="text" class="form-control" id="linkEdit" required></textarea>
+              <textarea type="text" class="form-control" id="linkEdit"></textarea>
             </div>
 
             <button type="button" class="btn btn-primary" id="saveEdit">Save Changes</button>

@@ -209,12 +209,12 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkInput" class="form-label">Text:</label>
-              <input type="text" class="form-control" id="textInput" required>
+              <textarea type="text" class="form-control" id="textInput" required></textarea>
             </div>
 
             <div class="mb-3">
               <label for="linkInput" class="form-label">External Link:</label>
-              <input type="text" class="form-control" id="linkInput" required>
+              <textarea type="text" class="form-control" id="linkInput"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" id="addService">Submit</button>
@@ -271,7 +271,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">External Link:</label>
-              <textarea type="text" class="form-control" id="linkEdit" required></textarea>
+              <textarea type="text" class="form-control" id="linkEdit"></textarea>
             </div>
 
             <button type="button" class="btn btn-primary" id="saveEditOutput">Save Changes</button>

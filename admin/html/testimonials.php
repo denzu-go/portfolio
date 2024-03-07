@@ -189,7 +189,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkInput" class="form-label">Client Image:</label>
-              <input type="text" class="form-control" id="iconInput" required>
+              <textarea type="text" class="form-control" id="iconInput" required></textarea>
               <?php
               $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
               $result = $conn->query($sql);
@@ -246,7 +246,7 @@ include 'global/head.php';
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">Client Image:</label>
-              <input type="text" class="form-control" id="iconEdit" required>
+              <textarea type="text" class="form-control" id="iconEdit" required></textarea>
               <?php
               $sql = "SELECT * FROM tutorials WHERE title = 'graphics'";
               $result = $conn->query($sql);
@@ -262,7 +262,7 @@ include 'global/head.php';
               ?>
             </div>
 
-            
+
 
             <div class="mb-3">
               <label for="linkEdit" class="form-label">Name:</label>

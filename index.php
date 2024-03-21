@@ -274,11 +274,11 @@ include 'global/head.php';
       <h2 class="section-title mb-3">My Portfolio</h2>
     </div>
     <div class="row justify-content-center p-0 m-0" data-aos="fade-up">
-      <a href="#portfolio1-section" class="btn btn-outline-primary p-2 m-1">Video Edit</a>
-      <a href="#portfolio2-section" class="btn btn-outline-primary p-2 m-1">Graphic Design</a>
-      <a href="#portfolio3-section" class="btn btn-outline-primary p-2 m-1">Social Media</a>
-      <a href="#portfolio4-section" class="btn btn-outline-primary p-2 m-1">Brand & Logo</a>
-      <a href="#portfolio5-section" class="btn btn-outline-primary p-2 m-1">Web & UI/UX</a>
+      <a href="#portfolio1-section" class="btn btn-outline-primary p-2 m-1">Video Edits</a>
+      <a href="#portfolio2-section" class="btn btn-outline-primary p-2 m-1">Graphic Designs</a>
+      <!-- <a href="#portfolio3-section" class="btn btn-outline-primary p-2 m-1">Social Media</a> -->
+      <!-- <a href="#portfolio4-section" class="btn btn-outline-primary p-2 m-1">Brand & Logo</a> -->
+      <!-- <a href="#portfolio5-section" class="btn btn-outline-primary p-2 m-1">Web & UI/UX</a> -->
     </div>
   </section>
 
@@ -289,7 +289,7 @@ include 'global/head.php';
 
       <div class="row">
         <div class="col-12 text-center" data-aos="">
-          <h2 class="mb-3">Video Edit</h2>
+          <h2 class="mb-3">Video Edits</h2>
         </div>
       </div>
 
@@ -367,7 +367,7 @@ include 'global/head.php';
 
       <div class="row">
         <div class="col-12 text-center" data-aos="">
-          <h2 class="mb-3">Graphic Design</h2>
+          <h2 class="mb-3">Graphic Designs</h2>
         </div>
       </div>
 
@@ -413,10 +413,10 @@ include 'global/head.php';
 
       </div>
     </div>
-
+    <br><br>
   </section>
 
-  <section class="site-section" id="portfolio3-section" style="margin-bottom: -100px;">
+  <!-- <section class="site-section" id="portfolio3-section" style="margin-bottom: -100px;">
     <br><br>
     <div class="container">
       <div class="row">
@@ -466,9 +466,9 @@ include 'global/head.php';
       </div>
     </div>
 
-  </section>
+  </section> -->
 
-  <section class="site-section" id="portfolio4-section" style="margin-bottom: -100px;">
+  <!-- <section class="site-section" id="portfolio4-section" style="margin-bottom: -100px;">
     <br><br>
     <div class="container">
 
@@ -520,9 +520,9 @@ include 'global/head.php';
 
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="site-section" id="portfolio5-section" style="margin-bottom: -100px;">
+  <!-- <section class="site-section" id="portfolio5-section" style="margin-bottom: -100px;">
     <br><br>
     <div class="container">
 
@@ -575,7 +575,7 @@ include 'global/head.php';
       </div>
     </div>
     <br><br>
-  </section>
+  </section> -->
 
   <section class="site-section border-bottom bg-light" id="services-section">
     <div class="container">
@@ -745,11 +745,11 @@ include 'global/head.php';
 
   <div id="bottomnav" class="navbar fixed-bottom">
     <div class="d-flex justify-content-center align-items-center" data-aos="">
-      <a href="#portfolio1-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Video Edit">Video Edit</span></a>
-      <a href="#portfolio2-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Graphic Design">Graphic Design</span></a>
-      <a href="#portfolio3-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Social Media">Social Media</span></a>
-      <a href="#portfolio4-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Brand & Logo">Brand & Logo</span></a>
-      <a href="#portfolio5-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Web Design & UI/UX">Web Design & UI/UX</span></a>
+      <a href="#portfolio1-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small" data-toggle="tooltip" title="Video Edits">Video Edits</span></a>
+      <a href="#portfolio2-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small" data-toggle="tooltip" title="Graphic Designs">Graphic Designs</span></a>
+      <!-- <a href="#portfolio3-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Social Media">Social Media</span></a> -->
+      <!-- <a href="#portfolio4-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Brand & Logo">Brand & Logo</span></a> -->
+      <!-- <a href="#portfolio5-section" id="button-bottom" class="btn btn-outline-secondary btn-sm m-1 p-1"><span class="small ellipsis-min" data-toggle="tooltip" title="Web Design & UI/UX">Web Design & UI/UX</span></a> -->
     </div>
   </div>
 

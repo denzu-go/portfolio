@@ -31,11 +31,11 @@
                         <li class="has-children">
                             <a href="#portfolio-section" class="nav-link">My Portfolio</a>
                             <ul class="dropdown">
-                                <li><a href="#portfolio1-section" class="nav-link">Video Edit</a></li>
-                                <li><a href="#portfolio2-section" class="nav-link">Graphic Design</a></li>
-                                <li><a href="#portfolio3-section" class="nav-link">Social Media</a></li>
-                                <li><a href="#portfolio4-section" class="nav-link">Brand & Logo</a></li>
-                                <li><a href="#portfolio5-section" class="nav-link">Web & UI/UX</a></li>
+                                <li><a href="#portfolio1-section" class="nav-link">Video Edits</a></li>
+                                <li><a href="#portfolio2-section" class="nav-link">Graphic Designs</a></li>
+                                <!-- <li><a href="#portfolio3-section" class="nav-link">Social Media</a></li> -->
+                                <!-- <li><a href="#portfolio4-section" class="nav-link">Brand & Logo</a></li> -->
+                                <!-- <li><a href="#portfolio5-section" class="nav-link">Web & UI/UX</a></li> -->
                             </ul>
                         </li>
 

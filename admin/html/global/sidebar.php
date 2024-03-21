@@ -74,7 +74,7 @@
                         <span>
                             <i class="fa-solid fa-film"></i>
                         </span>
-                        <span class="hide-menu">Video Edit</span>
+                        <span class="hide-menu">Video Edits</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -82,33 +82,33 @@
                         <span>
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </span>
-                        <span class="hide-menu">Graphic Design</span>
+                        <span class="hide-menu">Graphic Designs</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
+                <!-- <li class="sidebar-item">
                     <a class="sidebar-link" href="./social_media.php" aria-expanded="false">
                         <span>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                         </span>
                         <span class="hide-menu">Social Media</span>
                     </a>
-                </li>
-                <li class="sidebar-item">
+                </li> -->
+                <!-- <li class="sidebar-item">
                     <a class="sidebar-link" href="./brand_logo.php" aria-expanded="false">
                         <span>
                             <i class="fa-solid fa-anchor"></i>
                         </span>
                         <span class="hide-menu">Brand and Logo</span>
                     </a>
-                </li>
-                <li class="sidebar-item">
+                </li> -->
+                <!-- <li class="sidebar-item">
                     <a class="sidebar-link" href="./web.php" aria-expanded="false">
                         <span>
                             <i class="fa-regular fa-object-ungroup"></i>
                         </span>
                         <span class="hide-menu">Web Design & UI/UX</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
 
 

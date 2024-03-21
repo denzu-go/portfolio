@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Mar 10, 2024 at 03:12 PM
--- Server version: 10.5.20-MariaDB
--- PHP Version: 7.3.33
+-- Host: mysql.denzel-portfolio.cloud
+-- Generation Time: Mar 21, 2024 at 10:14 AM
+-- Server version: 8.0.28-0ubuntu0.20.04.3
+-- PHP Version: 8.1.2-1ubuntu2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id21953298_portfolio`
+-- Database: `denzel_go_portfolio_db`
 --
 
 -- --------------------------------------------------------
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `brand_logo_clients` (
-  `client_id` int(11) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `client_id` int NOT NULL,
+  `client_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -53,11 +53,11 @@ INSERT INTO `brand_logo_clients` (`client_id`, `client_name`, `is_visible`, `dat
 --
 
 CREATE TABLE `brand_logo_outputs` (
-  `id` int(11) NOT NULL,
-  `link` text DEFAULT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  `client_id` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -93,10 +93,10 @@ INSERT INTO `brand_logo_outputs` (`id`, `link`, `is_visible`, `date_added`, `cli
 --
 
 CREATE TABLE `constants_about` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `instruction` varchar(255) DEFAULT NULL,
-  `text` text DEFAULT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `instruction` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -115,11 +115,11 @@ INSERT INTO `constants_about` (`id`, `title`, `instruction`, `text`) VALUES
 --
 
 CREATE TABLE `constants_contacts` (
-  `id` int(11) NOT NULL,
-  `icon` varchar(255) DEFAULT NULL,
-  `text` varchar(255) DEFAULT NULL,
-  `link` text DEFAULT NULL,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -141,9 +141,9 @@ INSERT INTO `constants_contacts` (`id`, `icon`, `text`, `link`, `date_added`) VA
 --
 
 CREATE TABLE `constants_footer` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `text` text DEFAULT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -160,10 +160,10 @@ INSERT INTO `constants_footer` (`id`, `title`, `text`) VALUES
 --
 
 CREATE TABLE `constants_home` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `instruction` varchar(255) DEFAULT NULL,
-  `text` text DEFAULT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `instruction` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -172,7 +172,7 @@ CREATE TABLE `constants_home` (
 
 INSERT INTO `constants_home` (`id`, `title`, `instruction`, `text`) VALUES
 (1, 'name logo', '', 'Denzu'),
-(2, 'welcome', '', 'Welcome </i> <i class=\"fa-regular fa-face-laugh-beam\"></i><i class=\"fa-regular fa-hand-peace\"></i>'),
+(2, 'welcome', '', 'Welcome'),
 (3, 'texts below welcome', '', 'This is a Hub of Innovation and Digital Excellence <i class=\"fa-solid fa-fire\"></i>'),
 (4, 'button text', '', 'Get in touch'),
 (5, 'background image', 'https://www.facebook.com/', 'https://i.ibb.co/hcy5S8T/Untitled-design-1-min.jpg');
@@ -184,13 +184,13 @@ INSERT INTO `constants_home` (`id`, `title`, `instruction`, `text`) VALUES
 --
 
 CREATE TABLE `constants_services` (
-  `id` int(11) NOT NULL,
-  `icon` text DEFAULT NULL,
-  `instruction` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `text` text DEFAULT NULL,
-  `link` varchar(255) DEFAULT NULL,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int NOT NULL,
+  `icon` text COLLATE utf8mb4_general_ci,
+  `instruction` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_general_ci,
+  `link` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -215,12 +215,12 @@ INSERT INTO `constants_services` (`id`, `icon`, `instruction`, `title`, `text`, 
 --
 
 CREATE TABLE `constants_testimonials` (
-  `id` int(11) NOT NULL,
-  `icon` text DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `position` varchar(255) DEFAULT NULL,
-  `testimony` text DEFAULT NULL,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int NOT NULL,
+  `icon` text COLLATE utf8mb4_general_ci,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `position` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `testimony` text COLLATE utf8mb4_general_ci,
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -232,9 +232,9 @@ INSERT INTO `constants_testimonials` (`id`, `icon`, `name`, `position`, `testimo
 (4, 'https://i.ibb.co/w6sW3D5/306602427-2013476378863190-2159122660644102317-n-comp.jpg', 'Giro Gilberte', 'Content Creator', 'I am impressed with Denzel\'s work. He\'s not only friendly and approachable but also incredibly talented. His creations align perfectly with my vision.', '2024-03-06 09:25:38'),
 (5, 'https://i.ibb.co/0BbGnNp/358421419-6305285782852351-1931426938934660340-n.jpg', 'Happy Rafols', 'CEO of Upskill Multimedia', 'His work is amazing. He\'s easy to work with and delivers exactly what I want every time.', '2024-03-06 09:29:41'),
 (6, 'https://i.ibb.co/2jJ1MX7/365978708-7391112107581918-6616325517572873584-n-comp.jpg', 'Dennis Cabangis', 'Social Media Specialist at Krooberg Flagship', 'His ad creations are excellent, each design and edit grabs attention. Plus, he\'s easy to work with.', '2024-03-06 09:38:31'),
-(7, 'https://i.ibb.co/QYQjShk/415535181-1414823999455260-6147857234306018131-n-comp.jpg', 'Myles Tan', 'Content Creator', 'I like the way Denzel edits, every cut and transition flows smoothly, keeping viewers engaged. Highly recommend him for the next video projects.', '2024-03-06 09:40:38'),
+(7, 'https://i.ibb.co/QYQjShk/415535181-1414823999455260-6147857234306018131-n-comp.jpg', 'Myles Tan', 'Content Creator', 'Denzel is an awesome editor! He’s very skilled, honest and hardworking. 10/10 I would work with him again.', '2024-03-06 09:40:38'),
 (8, 'https://i.ibb.co/2h4kd1p/412287368-7415240771829051-5160771824234753200-n-comp.jpg', 'Jayson Magadan', 'CEO of IdealTrend', 'Denzel\'s web development and design skills are good. Each page layout and element is crafted nicely, ensuring a seamless user experience. He is punctual and manages revisions quickly.', '2024-03-06 09:44:23'),
-(9, 'https://i.ibb.co/TMdmYKP/376280415-588545376825314-5607383541739217557-n-comp.jpg', 'Stephen Gusi', 'Entrepreneur', 'Honestly, I gave Denzel a high level of complexity of tasks to see how capable he was. However, he surpassed my expectations, and surprisingly he delivered exceptional results beyond what I imagined.', '2024-03-06 16:02:04');
+(9, 'https://i.ibb.co/TMdmYKP/376280415-588545376825314-5607383541739217557-n-comp.jpg', 'Stephen Gusi', 'Entrepreneur', 'Excellent eye for creating graphics is quick to complete tasks - makes sure to ask questions if he doesn\'t understand, high quality results. would have loved to keep him on our team!', '2024-03-06 16:02:04');
 
 -- --------------------------------------------------------
 
@@ -243,10 +243,10 @@ INSERT INTO `constants_testimonials` (`id`, `icon`, `name`, `position`, `testimo
 --
 
 CREATE TABLE `graphic_clients` (
-  `client_id` int(11) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `client_id` int NOT NULL,
+  `client_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -268,11 +268,11 @@ INSERT INTO `graphic_clients` (`client_id`, `client_name`, `is_visible`, `date_a
 --
 
 CREATE TABLE `graphic_outputs` (
-  `id` int(11) NOT NULL,
-  `link` text DEFAULT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  `client_id` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -325,7 +325,12 @@ INSERT INTO `graphic_outputs` (`id`, `link`, `is_visible`, `date_added`, `client
 (115, 'https://i.ibb.co/XLj7S75/whats-inside-granola-page1-min-min-comp.jpg', 1, '2024-03-08 00:00:00', 3),
 (116, 'https://i.ibb.co/bmY7pXH/scarf-model-5-mincomp-1.jpg', 1, '2024-03-15 00:00:00', 1),
 (117, 'https://i.ibb.co/HCk2H2j/comp-scarf-min.jpg', 1, '2024-03-06 17:14:21', 1),
-(118, 'https://i.ibb.co/G5Htfc1/scarf-model-5-mincomp-2.jpg', 1, '2024-03-06 17:14:29', 1);
+(118, 'https://i.ibb.co/G5Htfc1/scarf-model-5-mincomp-2.jpg', 1, '2024-03-06 17:14:29', 1),
+(120, 'https://i.ibb.co/c1xCfVV/2-min.jpg', 1, '2024-03-18 14:39:59', 3),
+(121, 'https://i.ibb.co/XDj4L91/3-min.jpg', 1, '2024-03-18 14:40:08', 3),
+(122, 'https://i.ibb.co/R2Jwh7F/1-min.jpg', 1, '2024-03-18 14:40:18', 3),
+(123, 'https://i.ibb.co/F75W43H/5-min.jpg', 1, '2024-03-18 14:40:26', 3),
+(124, 'https://i.ibb.co/cNYcZDh/4-min.jpg', 1, '2024-03-18 14:40:34', 3);
 
 -- --------------------------------------------------------
 
@@ -334,10 +339,10 @@ INSERT INTO `graphic_outputs` (`id`, `link`, `is_visible`, `date_added`, `client
 --
 
 CREATE TABLE `social_media_clients` (
-  `client_id` int(11) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `client_id` int NOT NULL,
+  `client_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -357,11 +362,11 @@ INSERT INTO `social_media_clients` (`client_id`, `client_name`, `is_visible`, `d
 --
 
 CREATE TABLE `social_media_outputs` (
-  `id` int(11) NOT NULL,
-  `link` text DEFAULT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  `client_id` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -384,9 +389,9 @@ INSERT INTO `social_media_outputs` (`id`, `link`, `is_visible`, `date_added`, `c
 --
 
 CREATE TABLE `tutorials` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `link` text DEFAULT NULL
+  `id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `link` text COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -405,10 +410,10 @@ INSERT INTO `tutorials` (`id`, `title`, `link`) VALUES
 --
 
 CREATE TABLE `video_clients` (
-  `client_id` int(11) NOT NULL,
-  `client_name` varchar(255) DEFAULT NULL,
+  `client_id` int NOT NULL,
+  `client_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `is_visible` tinyint(1) DEFAULT NULL,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -428,12 +433,12 @@ INSERT INTO `video_clients` (`client_id`, `client_name`, `is_visible`, `date_add
 --
 
 CREATE TABLE `video_outputs` (
-  `id` int(11) NOT NULL,
-  `link` text DEFAULT NULL,
-  `is_visible` tinyint(4) DEFAULT 1,
-  `is_portrait` tinyint(4) NOT NULL DEFAULT 0,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  `client_id` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `is_visible` tinyint DEFAULT '1',
+  `is_portrait` tinyint NOT NULL DEFAULT '0',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -463,7 +468,9 @@ INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `is_portrait`, `date_ad
 (109, 'vavbPB3pqGo', 1, 1, '2024-03-05 06:37:32', 89),
 (110, 'TZp_fKPqHdw', 1, 1, '2024-03-06 00:00:00', 89),
 (111, 'O8IueJfsVgw', 1, 1, '2024-03-29 00:00:00', 90),
-(112, '6VaOj0bEYJg', 1, 1, '2024-03-29 00:00:00', 90);
+(112, '6VaOj0bEYJg', 1, 1, '2024-03-29 00:00:00', 90),
+(113, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Lya2Z9E5zhc?si=ROXvJDYf0uBes7H0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>', 1, 0, '2024-03-14 07:00:00', 89),
+(114, 'xZzNXsHRWxQ', 1, 1, '2024-04-01 07:00:00', 90);
 
 -- --------------------------------------------------------
 
@@ -472,10 +479,10 @@ INSERT INTO `video_outputs` (`id`, `link`, `is_visible`, `is_portrait`, `date_ad
 --
 
 CREATE TABLE `web_clients` (
-  `client_id` int(11) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+  `client_id` int NOT NULL,
+  `client_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -494,11 +501,11 @@ INSERT INTO `web_clients` (`client_id`, `client_name`, `is_visible`, `date_added
 --
 
 CREATE TABLE `web_outputs` (
-  `id` int(11) NOT NULL,
-  `link` text DEFAULT NULL,
-  `is_visible` tinyint(1) NOT NULL DEFAULT 1,
-  `date_added` timestamp NOT NULL DEFAULT current_timestamp(),
-  `client_id` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `link` text COLLATE utf8mb4_general_ci,
+  `is_visible` tinyint(1) NOT NULL DEFAULT '1',
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `client_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -629,97 +636,97 @@ ALTER TABLE `web_outputs`
 -- AUTO_INCREMENT for table `brand_logo_clients`
 --
 ALTER TABLE `brand_logo_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `client_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `brand_logo_outputs`
 --
 ALTER TABLE `brand_logo_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `constants_about`
 --
 ALTER TABLE `constants_about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `constants_contacts`
 --
 ALTER TABLE `constants_contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `constants_footer`
 --
 ALTER TABLE `constants_footer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `constants_home`
 --
 ALTER TABLE `constants_home`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `constants_services`
 --
 ALTER TABLE `constants_services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `constants_testimonials`
 --
 ALTER TABLE `constants_testimonials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `graphic_clients`
 --
 ALTER TABLE `graphic_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `client_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `graphic_outputs`
 --
 ALTER TABLE `graphic_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT for table `social_media_clients`
 --
 ALTER TABLE `social_media_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `client_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `social_media_outputs`
 --
 ALTER TABLE `social_media_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `video_clients`
 --
 ALTER TABLE `video_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `client_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `video_outputs`
 --
 ALTER TABLE `video_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT for table `web_clients`
 --
 ALTER TABLE `web_clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `client_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `web_outputs`
 --
 ALTER TABLE `web_outputs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

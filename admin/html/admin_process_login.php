@@ -7,8 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputPassword = $_POST["password"];
 
     // Hardcoded credentials for demonstration purposes
-    $validUsername = "usernamenidenzelgo";
-    $validPassword = "GoFORJESUS7--87000870001201277--";
+    $validUsername = "username";
+    $validPassword = "thepasswordisP@ssw0rd";
 
     // Check if provided credentials match the valid credentials
     if ($inputUsername === $validUsername && $inputPassword === $validPassword) {
